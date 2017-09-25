@@ -4,7 +4,7 @@ import '../styles/index.css';
 class Program extends React.Component {
     render() {
         return(
-            <div class="content" id="program-content">
+            <div className="content">
                 <h1>Ohjelma</h1>
                 <h2>Perjantai 1.12.</h2>
                 <p>

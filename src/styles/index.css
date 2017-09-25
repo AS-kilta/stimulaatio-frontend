@@ -7,10 +7,6 @@
     max-height: 50px;
 }
 
-.main-content {
-    padding-bottom: 80px;
-}
-
 footer {
     text-align: center;
     width: 100%;
@@ -25,8 +21,12 @@ footer {
     justify-content: center;
 }
 
+.main-content {
+    text-align: center;
+}
+
 @media (min-width: 1000px) {
-    #main-content {
+    .main-content {
         max-width: 800px;
         margin: auto;
     }
@@ -42,7 +42,7 @@ footer {
     text-align: center;
 }
 
-div .content {
+.content {
     text-align: center;
 }
 
