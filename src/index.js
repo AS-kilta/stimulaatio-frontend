@@ -36,7 +36,7 @@ class Stimulaatio extends React.Component {
         return(
             <div id="wrapper">
                 <header>
-                    <div id="logo-container">
+                    <div className="logo-container">
 
                         <img src={header} alt="Stimulaatio XIX logo" />
                     </div>
@@ -54,7 +54,7 @@ class Stimulaatio extends React.Component {
                         </Navbar>
                     </div>
                 </header>
-                <div id="main-content">
+                <div className="main-content">
                     <Router>
                         <Container>
                             <Row>
@@ -74,9 +74,9 @@ class Stimulaatio extends React.Component {
                             <Col>Yhteistyössä</Col>
                         </Row>
                         <Row id="sponsor-container">
-                            <Col id="sponsor" md={{size: 'auto'}}><img src={nike} /></Col>
-                            <Col id="sponsor" md={{size: 'auto'}}><img src={chanel} /></Col>
-                            <Col id="sponsor" md={{size: 'auto'}}><img src={booz} /></Col>
+                            <Col id="sponsor" md={{size: 'auto'}}><img src={nike} alt="Logo" /></Col>
+                            <Col id="sponsor" md={{size: 'auto'}}><img src={chanel} alt="Logo" /></Col>
+                            <Col id="sponsor" md={{size: 'auto'}}><img src={booz} alt="Logo" /></Col>
                         </Row>
                     </Navbar>
                 </footer>
