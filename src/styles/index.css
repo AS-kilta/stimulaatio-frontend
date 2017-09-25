@@ -1,0 +1,65 @@
+#logo-container > img {
+    width: 100%;
+    height: auto;
+}
+
+#sponsor > img {
+    max-height: 50px;
+}
+
+#main-content {
+    padding-bottom: 80px;
+}
+
+footer {
+    text-align: center;
+    width: 100%;
+}
+
+.navbar-collapse {
+    justify-content: center;
+    text-align: center;
+}
+
+#registration-navbar {
+    justify-content: center;
+}
+
+@media (min-width: 1000px) {
+    #main-content {
+        max-width: 800px;
+        margin: auto;
+    }
+}
+
+#home-content {
+    padding-top: 20px;
+    text-align: center;
+}
+
+#program-content {
+    padding-top: 20px;
+    text-align: center;
+}
+
+div .content {
+    text-align: center;
+}
+
+#sponsor {
+    padding: 12px;
+}
+
+#sponsor-container {
+    justify-content: center;
+}
+
+#table-container {
+    display: flex;
+    padding-top: 12px;
+    justify-content: center;
+}
+
+#participants-table {
+    align-self: center;
+}
