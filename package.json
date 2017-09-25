@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "bootstrap": "^4.0.0-alpha.6",
+    "bootstrap": "4.0.0-alpha.6",
     "fixed-data-table": "^0.6.4",
     "jquery": "^3.2.1",
     "popper.js": "^1.12.5",
