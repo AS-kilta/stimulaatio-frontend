@@ -16,7 +16,7 @@ class Registration extends React.Component {
 
     formTimer() {
         var currentTime = new Date();
-        var openTime = new Date(2018, 8, 24, 21, 46, 0, 0);
+        var openTime = new Date(2017, 8, 24, 21, 46, 0, 0);
 
         if (currentTime > openTime) {
             return true;
@@ -190,25 +190,25 @@ class RegistrationForm extends React.Component {
                 <Form onSubmit={this.handleSubmit}>
                     <FormGroup row>
                         <Label for="first_name" md={3}>Etunimi</Label>
-                        <Col xs="12" sm="8" md="6">
+                        <Col xs="12" sm="12" md="8">
                             <Input type="string" name="first_name" id="first_name" onChange={this.handleInputChange} />
                         </Col>
                     </FormGroup>
                     <FormGroup row>
                         <Label for="last_name" md={3}>Sukunimi</Label>
-                        <Col xs="12" sm="8" md="6">
+                        <Col xs="12" sm="12" md="8">
                             <Input type="string" name="last_name" id="last_name" onChange={this.handleInputChange} />
                         </Col>
                     </FormGroup>
                     <FormGroup row>
                         <Label for="email" md={3}>Sähköposti</Label>
-                        <Col xs="12" sm="8" md="6">
+                        <Col xs="12" sm="12" md="8">
                             <Input type="string" name="email" id="email" onChange={this.handleInputChange} />
                         </Col>
                     </FormGroup>
                     <FormGroup row>
                         <Label for="ticket_type" md={3}>Lipputyyppi</Label>
-                        <Col xs="12" sm="8" md="6">
+                        <Col xs="12" sm="12" md="8">
                             <Input type="select" name="ticket_type" id="ticket_type" onChange={this.handleInputChange} >
                                 <option value="student">Opiskelija (á 40€)</option>
                                 <option value="full">Valmistunut (á 60€)</option>
@@ -218,7 +218,7 @@ class RegistrationForm extends React.Component {
                     </FormGroup>
                     <FormGroup row>
                         <Label for="sillis" md={3}>Sillis</Label>
-                        <Col xs="12" sm="8" md="6">
+                        <Col xs="12" sm="12" md="8">
                             <FormGroup check>
                                 <Label check>
                                     <Input type="checkbox" name="sillis" id="sillis" checked={this.state.sillis} onChange={this.handleInputChange} />{' '}
@@ -229,13 +229,13 @@ class RegistrationForm extends React.Component {
                     </FormGroup>
                     <FormGroup row>
                         <Label for="table_company" md={3}>Pöytäseura</Label>
-                        <Col xs="12" sm="8" md="6">
+                        <Col xs="12" sm="12" md="8">
                             <Input type="string" name="table_company" id="table_company" onChange={this.handleInputChange} />
                         </Col>
                     </FormGroup>
                     <FormGroup row>
                         <Label for="avec" md={3}>Avec</Label>
-                        <Col xs="12" sm="8" md="6">
+                        <Col xs="12" sm="12" md="8">
                             <Input type="string" name="avec" id="avec" onChange={this.handleInputChange} />
                             <FormText color="muted">
                                 Huomaathan, että avecin on ilmoittauduttava erikseen!
@@ -244,13 +244,13 @@ class RegistrationForm extends React.Component {
                     </FormGroup>
                     <FormGroup row>
                         <Label for="special_diet" md={3}>Erikoisruokavaliot</Label>
-                        <Col xs="12" sm="8" md="6">
+                        <Col xs="12" sm="12" md="8">
                             <Input type="textarea" name="special_diet" id="special_diet" onChange={this.handleInputChange} />
                         </Col>
                     </FormGroup>
                     <FormGroup row>
                         <Label for="menu_type" md={3}>Menu</Label>
-                        <Col xs="12" sm="8" md="6">
+                        <Col xs="12" sm="12" md="8">
                             <Input type="select" name="menu_type" id="menu_type" onChange={this.handleInputChange} >
                                 <option value="with alcohol">Alkoholillinen</option>
                                 <option value="without alcohol">Alkoholiton</option>
@@ -259,7 +259,7 @@ class RegistrationForm extends React.Component {
                     </FormGroup>
                     <FormGroup row>
                         <Label for="greeting" md={3}>Tervehdys</Label>
-                        <Col xs="12" sm="8" md="6">
+                        <Col xs="12" sm="12" md="8">
                             <FormGroup check>
                                 <Label check>
                                     <Input type="checkbox" name="greeting" id="greeting" checked={this.state.greeting} onChange={this.handleInputChange} />{' '}
@@ -272,7 +272,7 @@ class RegistrationForm extends React.Component {
                         this.state.greeting ?
                         <FormGroup row>
                             <Label for="greeting_group" md={3}>Edustamani taho</Label>
-                            <Col xs="12" sm="8" md="6">
+                            <Col xs="12" sm="12" md="8">
                                 <Input type="string" name="greeting_group" id="greeting_group" onChange={this.handleInputChange} />
                             </Col>
                         </FormGroup>
@@ -280,7 +280,7 @@ class RegistrationForm extends React.Component {
                     }
                     <FormGroup row>
                         <Label for="freshman_year" md={3}>Phuksivuosi</Label>
-                        <Col xs="12" sm="8" md="6">
+                        <Col xs="12" sm="12" md="8">
                             <Input type="string" name="freshman_year" id="freshman_year" onChange={this.handleInputChange} />
                         </Col>
                     </FormGroup>

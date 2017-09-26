@@ -1,3 +1,60 @@
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700,700i');
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display+SC:400,700');
+
+
+body {
+    background-color: #0f117e;
+    color: #f2f2f2;
+    font-family: 'Playfair Display', serif;
+}
+
+h1 {
+    font-family: 'Playfair Display SC', serif;
+    padding-bottom: 0.4em;
+    letter-spacing: 2px;
+    -webkit-hyphens: auto;
+    -ms-hyphens: auto;
+    hyphens: auto;
+    -moz-hyphens: auto;
+}
+
+h1:after{
+    content:'';
+    position: absolute;
+    top: 50px; 
+    left: 50%;
+    margin-left: -20px;
+    width: 0;
+    z-index:1;
+    height: 0;
+    border-top: solid 20px #2629d8;
+    border-left: solid 15px transparent;
+    border-right: solid 15px transparent;
+}
+
+h2, h3, h4, h5 {
+    color: #ca55ea;
+    margin: 1em;
+    font-family: 'Playfair Display SC', serif;
+    letter-spacing: 2px;
+
+}
+
+b, a {
+    color: #ca55ea;
+}
+
+p {
+    letter-spacing: 0.5px; 
+
+}
+
+p a:hover {
+    color: #ca55ea;
+    text-decoration: none;
+    border-bottom: 2px solid white;
+}
+
 .logo-container > img {
     width: 100%;
     height: auto;
@@ -7,22 +64,78 @@
     max-height: 50px;
 }
 
+.container {
+    padding: 2em 0;
+}
+
 footer {
     text-align: center;
     width: 100%;
+    padding: 2em 0;
+}
+
+#sponsored-by {
+    font-size: 16px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 2em;
+}
+
+#sponsored-by:after{
+    content:'';
+    position: absolute;
+    top: 35px; 
+    left: 50%;
+    margin-left: -20px;
+    width: 0;
+    z-index:1;
+    height: 0;
+    border-top: solid 20px #cc56ec;
+    border-left: solid 15px transparent;
+    border-right: solid 15px transparent;
 }
 
 .navbar-collapse {
     justify-content: center;
     text-align: center;
+    background-color: #af3dda;
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 1.4px;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.navbar-light .navbar-nav .nav-link:hover {
+    color: #cc56ec;
+    transition: 0.3s;
+}
+
+.bg-faded {
+     background-color: #af3dda;
 }
 
 #registration-navbar {
     justify-content: center;
+    background-color: transparent;
+    border-bottom: 3px solid #af3dda;
+}
+
+#registration-container {
+    font-family: 'Playfair Display SC', serif;
+}
+
+#registration-container h1:after {
+    content: none;
+
 }
 
 .main-content {
     text-align: center;
+    padding: 0 1em;
 }
 
 @media (min-width: 1000px) {
@@ -63,3 +176,91 @@ footer {
 #participants-table {
     align-self: center;
 }
+
+/* table overrides */
+
+.react-bs-table-container {
+    text-align: center;
+}
+.react-bs-container-header {
+    font-size: 16px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #ca55ea;
+}
+
+.react-bs-table-bordered {
+    border: 0 !important;
+}
+
+th, td {
+    text-align:center !important; 
+    vertical-align:middle !important;
+    border: 0 !important;
+    border-bottom: 2px solid #1b1c90 !important;
+    padding: 10px !important;
+}
+
+/* form styles */
+
+.form-control {
+    border-radius: 0;
+    background-color: transparent;
+    border: 0;
+    border-bottom: 3px solid #3a3bb7;
+    font-family: 'Playfair Display', serif;
+    letter-spacing: 1px;
+    color: white;
+}
+
+.form-control:focus {
+    border-bottom: 3px solid #ca55ea;
+    color: white;
+    background-color: transparent;
+    
+}
+
+.col-form-label, label {
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-size: 12px;
+}
+
+small {
+    letter-spacing: 2px;
+    line-height: 14px;
+}
+
+select {
+    border-radius: 0;
+}
+
+.navbar-toggler {
+    margin: auto;
+    border-color: rgb(255,255,255) !important;
+}
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255,1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E") !important;
+}
+
+/* buttöön */
+
+.btn {
+    background-color: transparent;
+    border-radius: 0;
+    margin: 1em;
+    font-family: 'Playfair Display', serif;
+    text-transform: uppercase;
+    padding: 0.5em 2em;
+    border: 3px solid #ca55ea;
+    color: white;
+    letter-spacing: 2px;
+}
+
+.btn:hover {
+    background-color: #ca55ea;
+    color: white;
+    border: 3px solid #ca55ea;
+
+}
+
