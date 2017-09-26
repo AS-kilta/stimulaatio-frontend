@@ -1,10 +1,11 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.css';
-import 'fixed-data-table/dist/fixed-data-table.css';
 import { Button, Col, Form, Nav, Container, FormGroup, Label, Input, FormText, Navbar, NavItem, NavLink } from 'reactstrap';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
-import { Table, Column, Cell } from 'fixed-data-table';
 import '../styles/index.css';
+
+import {BootstrapTable, TableHeaderColumn} from 'react-bootstrap-table';
+import 'react-bootstrap-table/dist/react-bootstrap-table-all.min.css';
 
 class Registration extends React.Component {
     constructor() {
@@ -112,6 +113,11 @@ class RegistrationParticipants extends React.Component {
                     first_name: "Adam",
                     last_name: "Smith",
                     table_company: "USA",
+                },
+                {
+                    first_name: "Teemu",
+                    last_name: "Teekkari",
+                    table_company: "Se ja tää ja tuo ja se ja teekkarijaosto se ja se ja kemikaalit ja hajusuola!",
                 }
             ],
             rowHeight: 40,
@@ -121,37 +127,12 @@ class RegistrationParticipants extends React.Component {
 
     render() {
         return(
-            <div id="table-container">
-                <Table id="participants-table"
-                  rowHeight={40}
-                  headerHeight={40}
-                  rowsCount={this.state.participants.length}
-                  width={600}
-                  maxHeight={100000}
-                  {...this.props}>
-                    <Column
-                      header={<Cell>Nimi</Cell>}
-                      width={200}
-                      flexGrow={1}
-                      cell={props => (
-                            <Cell {...props}>
-                                {this.state.participants[props.rowIndex].first_name}
-                                {' '}
-                                {this.state.participants[props.rowIndex].last_name}
-                            </Cell>
-                        )}
-                    />
-                    <Column
-                      header={<Cell>Pöytäseura</Cell>}
-                      width={400}
-                      flexGrow={2}
-                      cell={props => (
-                            <Cell {...props}>
-                                {this.state.participants[props.rowIndex].table_company}
-                            </Cell>
-                        )}
-                    />
-                </Table>
+            <div ref="child" id="table-container">
+                <BootstrapTable data={this.state.participants} options={{ noDataText: 'Ilmoittautuneita ei ole.' }}>
+                    <TableHeaderColumn dataField='first_name' isKey tdStyle={{ whiteSpace: 'normal' }} width='28%'>Etunimi</TableHeaderColumn>
+                    <TableHeaderColumn dataField='last_name' tdStyle={{ whiteSpace: 'normal' }} width='28%'>Sukunimi</TableHeaderColumn>
+                    <TableHeaderColumn dataField='table_company' tdStyle={{ whiteSpace: 'normal' }} width='44%'>Pöytätoive</TableHeaderColumn>
+                </BootstrapTable>
             </div>
         );
     }
