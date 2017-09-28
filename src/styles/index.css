@@ -23,7 +23,7 @@ h1 {
 h1:after{
     content:'';
     position: absolute;
-    top: 45px; 
+    top: 45px;
     left: 50%;
     margin-left: -20px;
     width: 0;
@@ -34,14 +34,22 @@ h1:after{
     border-right: solid 15px transparent;
 }
 
-h2, h3, h4, h5 {
+h2, h3, h4 {
     color: #ca55ea;
     margin: 1em;
     letter-spacing: 2px;
     text-transform: uppercase;
     font-weight: 600;
     font-size: 26px;
+}
 
+h5 {
+    color: #ca55ea;
+    margin: 1em;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 26px;
 }
 
 b, a {
@@ -49,7 +57,7 @@ b, a {
 }
 
 p {
-    letter-spacing: 0.5px; 
+    letter-spacing: 0.5px;
 
 }
 
@@ -88,7 +96,7 @@ footer {
 #sponsored-by:after{
     content:'';
     position: absolute;
-    top: 35px; 
+    top: 35px;
     left: 50%;
     margin-left: -20px;
     width: 0;
@@ -128,13 +136,21 @@ footer {
     border-bottom: 3px solid #af3dda;
 }
 
-#registration-container {
+.registration-container {
     font-family: 'Raleway', sans-serif;
 }
 
-#registration-container h1:after {
+.registration-container h1:after {
     content: none;
+}
 
+#form-container {
+    max-width: 600px;
+    margin: auto;
+}
+
+Label {
+    text-align: left;
 }
 
 .main-content {
@@ -144,17 +160,21 @@ footer {
 
 @media (min-width: 1000px) {
     .main-content {
-        max-width: 800px;
+        max-width: 700px;
         margin: auto;
     }
 }
 
-#home-content {
+.info-content {
+    padding-top: 20px;
+}
+
+.home-content {
     padding-top: 20px;
     text-align: center;
 }
 
-#program-content {
+.program-content {
     padding-top: 20px;
     text-align: center;
 }
@@ -198,7 +218,7 @@ footer {
 }
 
 th, td {
-    text-align:center !important; 
+    text-align:center !important;
     vertical-align:middle !important;
     border: 0 !important;
     border-bottom: 2px solid #1b1c90 !important;
@@ -221,7 +241,10 @@ th, td {
     border-bottom: 3px solid #ca55ea;
     color: white;
     background-color: transparent;
-    
+}
+
+.form-check {
+    text-align: left;
 }
 
 .col-form-label, label {
@@ -267,4 +290,3 @@ select {
     border: 3px solid #ca55ea;
 
 }
-

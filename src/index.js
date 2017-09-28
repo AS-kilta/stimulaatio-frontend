@@ -37,7 +37,6 @@ class Stimulaatio extends React.Component {
             <div id="wrapper">
                 <header>
                     <div className="logo-container">
-
                         <img src={header} alt="Stimulaatio XIX logo" />
                     </div>
                     <div id="navibar">
@@ -56,16 +55,12 @@ class Stimulaatio extends React.Component {
                 </header>
                 <div className="main-content">
                     <Router>
-                        <Container>
-                            <Row>
-                                <Col>
-                                    <Route exact path="/" component={Home} />
-                                    <Route path="/ohjelma" component={Program} />
-                                    <Route path="/ilmoittautuminen" component={Registration} />
-                                    <Route path="/lisatietoa" component={Info} />
-                                </Col>
-                            </Row>
-                        </Container>
+                        <div>
+                            <Route exact path="/" component={Home} />
+                            <Route path="/ohjelma" component={Program} />
+                            <Route path="/ilmoittautuminen" component={Registration} />
+                            <Route path="/lisatietoa" component={Info} />
+                        </div>
                     </Router>
                 </div>
                 <footer>

@@ -68,7 +68,9 @@ class RegistrationInfo extends React.Component {
         return(
             <div>
                 <p>
-                    Tarviiks tätä?
+                    Ilmoittautuminen aukeaa 1.11.2017 kello 12:00 ja sulkeutuu 2.11.2017 kutsuvieraille
+                    ja 3.11.2017 kello kiltalaisille. Kutsuvierasilmoittautumisen sulkeutumisen jälkeen heille
+                    varatut paikat vapautetaan kiltalaisille.
                 </p>
             </div>
         );
@@ -84,9 +86,14 @@ class RegistrationPayment extends React.Component {
 
     render() {
         return(
-            <div>
+            <div className="registration-container">
+                <h1>Maksutiedot</h1>
                 <p>
-                    Rahet tai henki!
+                    Saaja: Automaatio- ja systeemitekniikan kilta ry<br/>
+                    IBAN: FI84 3131 3001 8081 61<br/>
+                    Viesti: Stimulaatio 2017, "Oma Nimi"<br/>
+                    Hinta: N € (opiskelija) tai N+1 € (valmistunut)<br/>
+                    Eräpäivä: 12.11.2017
                 </p>
             </div>
         );
@@ -127,7 +134,7 @@ class RegistrationParticipants extends React.Component {
 
     render() {
         return(
-            <div ref="child" id="table-container">
+            <div id="table-container">
                 <BootstrapTable data={this.state.participants} options={{ noDataText: 'Ilmoittautuneita ei ole.' }}>
                     <TableHeaderColumn dataField='first_name' isKey tdStyle={{ whiteSpace: 'normal' }} width='28%'>Etunimi</TableHeaderColumn>
                     <TableHeaderColumn dataField='last_name' tdStyle={{ whiteSpace: 'normal' }} width='28%'>Sukunimi</TableHeaderColumn>
@@ -153,6 +160,7 @@ class RegistrationForm extends React.Component {
         super();
 
         this.state = {
+            type: 'normal',
             first_name: null,
             last_name: null,
             email: null,
@@ -168,6 +176,7 @@ class RegistrationForm extends React.Component {
 
         this.handleSubmit = this.handleSubmit.bind(this);
         this.handleInputChange = this.handleInputChange.bind(this);
+        this.eventForm = this.eventForm.bind(this);
     }
 
     handleSubmit(event) {
@@ -183,109 +192,117 @@ class RegistrationForm extends React.Component {
         this.setState({[name]: value});
     }
 
+    eventForm() {
+        return(
+            <Form onSubmit={this.handleSubmit}>
+                <FormGroup row>
+                    <Label for="first_name" md={3}>Etunimi</Label>
+                    <Col xs="12" sm="12" md="8">
+                        <Input type="string" name="first_name" id="first_name" onChange={this.handleInputChange} />
+                    </Col>
+                </FormGroup>
+                <FormGroup row>
+                    <Label for="last_name" md={3}>Sukunimi</Label>
+                    <Col xs="12" sm="12" md="8">
+                        <Input type="string" name="last_name" id="last_name" onChange={this.handleInputChange} />
+                    </Col>
+                </FormGroup>
+                <FormGroup row>
+                    <Label for="email" md={3}>Sähköposti</Label>
+                    <Col xs="12" sm="12" md="8">
+                        <Input type="string" name="email" id="email" onChange={this.handleInputChange} />
+                    </Col>
+                </FormGroup>
+                <FormGroup row>
+                    <Label for="ticket_type" md={3}>Lipputyyppi</Label>
+                    <Col xs="12" sm="12" md="8">
+                        <Input type="select" name="ticket_type" id="ticket_type" onChange={this.handleInputChange} >
+                            <option value="student">Opiskelija (á 40€)</option>
+                            <option value="full">Valmistunut (á 60€)</option>
+                            <option value="free">Tarjottu (á 0€)</option>
+                        </Input>
+                    </Col>
+                </FormGroup>
+                <FormGroup row>
+                    <Label for="sillis" md={3}>Sillis</Label>
+                    <Col xs="12" sm="12" md="8">
+                        <FormGroup check>
+                            <Label check>
+                                <Input type="checkbox" name="sillis" id="sillis" checked={this.state.sillis} onChange={this.handleInputChange} />{' '}
+                                Osallistun sillikselle (20€)
+                            </Label>
+                        </FormGroup>
+                    </Col>
+                </FormGroup>
+                <FormGroup row>
+                    <Label for="table_company" md={3}>Pöytäseura</Label>
+                    <Col xs="12" sm="12" md="8">
+                        <Input type="string" name="table_company" id="table_company" onChange={this.handleInputChange} />
+                    </Col>
+                </FormGroup>
+                <FormGroup row>
+                    <Label for="avec" md={3}>Avec</Label>
+                    <Col xs="12" sm="12" md="8">
+                        <Input type="string" name="avec" id="avec" onChange={this.handleInputChange} />
+                        <FormText color="muted">
+                            Huomaathan, että avecin on ilmoittauduttava erikseen!
+                        </FormText>
+                    </Col>
+                </FormGroup>
+                <FormGroup row>
+                    <Label for="special_diet" md={3}>Erikoisruokavalio</Label>
+                    <Col xs="12" sm="12" md="8">
+                        <Input type="textarea" name="special_diet" id="special_diet" onChange={this.handleInputChange} />
+                    </Col>
+                </FormGroup>
+                <FormGroup row>
+                    <Label for="menu_type" md={3}>Menu</Label>
+                    <Col xs="12" sm="12" md="8">
+                        <Input type="select" name="menu_type" id="menu_type" onChange={this.handleInputChange} >
+                            <option value="with alcohol">Alkoholillinen</option>
+                            <option value="without alcohol">Alkoholiton</option>
+                        </Input>
+                    </Col>
+                </FormGroup>
+                <FormGroup row>
+                    <Label for="greeting" md={3}>Tervehdys</Label>
+                    <Col xs="12" sm="12" md="8">
+                        <FormGroup check>
+                            <Label check>
+                                <Input type="checkbox" name="greeting" id="greeting" checked={this.state.greeting} onChange={this.handleInputChange} />{' '}
+                                Haluan esittää tervehdyksen cocktailtilaisuudessa
+                            </Label>
+                        </FormGroup>
+                    </Col>
+                </FormGroup>
+                {
+                    this.state.greeting ?
+                    <FormGroup row>
+                        <Label for="greeting_group" md={3}>Edustamani taho</Label>
+                        <Col xs="12" sm="12" md="8">
+                            <Input type="string" name="greeting_group" id="greeting_group" onChange={this.handleInputChange} />
+                        </Col>
+                    </FormGroup>
+                    : null
+                }
+                <FormGroup row>
+                    <Label for="freshman_year" md={3}>Phuksivuosi</Label>
+                    <Col xs="12" sm="12" md="8">
+                        <Input type="string" name="freshman_year" id="freshman_year" onChange={this.handleInputChange} />
+                    </Col>
+                </FormGroup>
+                <Button>Lähetä</Button>
+            </Form>
+        )
+    }
+
     render() {
         return(
-            <div id="registration-container">
+            <div className="registration-container">
                 <h1>Ilmoittautuminen</h1>
-                <Form onSubmit={this.handleSubmit}>
-                    <FormGroup row>
-                        <Label for="first_name" md={3}>Etunimi</Label>
-                        <Col xs="12" sm="12" md="8">
-                            <Input type="string" name="first_name" id="first_name" onChange={this.handleInputChange} />
-                        </Col>
-                    </FormGroup>
-                    <FormGroup row>
-                        <Label for="last_name" md={3}>Sukunimi</Label>
-                        <Col xs="12" sm="12" md="8">
-                            <Input type="string" name="last_name" id="last_name" onChange={this.handleInputChange} />
-                        </Col>
-                    </FormGroup>
-                    <FormGroup row>
-                        <Label for="email" md={3}>Sähköposti</Label>
-                        <Col xs="12" sm="12" md="8">
-                            <Input type="string" name="email" id="email" onChange={this.handleInputChange} />
-                        </Col>
-                    </FormGroup>
-                    <FormGroup row>
-                        <Label for="ticket_type" md={3}>Lipputyyppi</Label>
-                        <Col xs="12" sm="12" md="8">
-                            <Input type="select" name="ticket_type" id="ticket_type" onChange={this.handleInputChange} >
-                                <option value="student">Opiskelija (á 40€)</option>
-                                <option value="full">Valmistunut (á 60€)</option>
-                                <option value="free">Tarjottu (á 0€)</option>
-                            </Input>
-                        </Col>
-                    </FormGroup>
-                    <FormGroup row>
-                        <Label for="sillis" md={3}>Sillis</Label>
-                        <Col xs="12" sm="12" md="8">
-                            <FormGroup check>
-                                <Label check>
-                                    <Input type="checkbox" name="sillis" id="sillis" checked={this.state.sillis} onChange={this.handleInputChange} />{' '}
-                                    Osallistun sillikselle (20€)
-                                </Label>
-                            </FormGroup>
-                        </Col>
-                    </FormGroup>
-                    <FormGroup row>
-                        <Label for="table_company" md={3}>Pöytäseura</Label>
-                        <Col xs="12" sm="12" md="8">
-                            <Input type="string" name="table_company" id="table_company" onChange={this.handleInputChange} />
-                        </Col>
-                    </FormGroup>
-                    <FormGroup row>
-                        <Label for="avec" md={3}>Avec</Label>
-                        <Col xs="12" sm="12" md="8">
-                            <Input type="string" name="avec" id="avec" onChange={this.handleInputChange} />
-                            <FormText color="muted">
-                                Huomaathan, että avecin on ilmoittauduttava erikseen!
-                            </FormText>
-                        </Col>
-                    </FormGroup>
-                    <FormGroup row>
-                        <Label for="special_diet" md={3}>Erikoisruokavaliot</Label>
-                        <Col xs="12" sm="12" md="8">
-                            <Input type="textarea" name="special_diet" id="special_diet" onChange={this.handleInputChange} />
-                        </Col>
-                    </FormGroup>
-                    <FormGroup row>
-                        <Label for="menu_type" md={3}>Menu</Label>
-                        <Col xs="12" sm="12" md="8">
-                            <Input type="select" name="menu_type" id="menu_type" onChange={this.handleInputChange} >
-                                <option value="with alcohol">Alkoholillinen</option>
-                                <option value="without alcohol">Alkoholiton</option>
-                            </Input>
-                        </Col>
-                    </FormGroup>
-                    <FormGroup row>
-                        <Label for="greeting" md={3}>Tervehdys</Label>
-                        <Col xs="12" sm="12" md="8">
-                            <FormGroup check>
-                                <Label check>
-                                    <Input type="checkbox" name="greeting" id="greeting" checked={this.state.greeting} onChange={this.handleInputChange} />{' '}
-                                    Haluan esittää tervehdyksen cocktailtilaisuudessa
-                                </Label>
-                            </FormGroup>
-                        </Col>
-                    </FormGroup>
-                    {
-                        this.state.greeting ?
-                        <FormGroup row>
-                            <Label for="greeting_group" md={3}>Edustamani taho</Label>
-                            <Col xs="12" sm="12" md="8">
-                                <Input type="string" name="greeting_group" id="greeting_group" onChange={this.handleInputChange} />
-                            </Col>
-                        </FormGroup>
-                        : null
-                    }
-                    <FormGroup row>
-                        <Label for="freshman_year" md={3}>Phuksivuosi</Label>
-                        <Col xs="12" sm="12" md="8">
-                            <Input type="string" name="freshman_year" id="freshman_year" onChange={this.handleInputChange} />
-                        </Col>
-                    </FormGroup>
-                    <Button>Lähetä</Button>
-                </Form>
+                <div id="form-container">
+                    {this.eventForm()}
+                </div>
             </div>
         )
     }
