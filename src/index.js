@@ -9,9 +9,7 @@ import Home from './pages/Home';
 import Program from './pages/Program';
 import Registration from './pages/Registration';
 
-import nike from './img/nike.jpg';
-import chanel from './img/chanel.png';
-import booz from './img/booz.jpg';
+import eficode from './img/eficode.svg';
 import header from './img/header.png';
 
 import './styles/index.css';
@@ -69,9 +67,7 @@ class Stimulaatio extends React.Component {
                             <Col>Yhteistyössä</Col>
                         </Row>
                         <Row id="sponsor-container">
-                            <Col id="sponsor" md={{size: 'auto'}}><img src={nike} alt="Logo" /></Col>
-                            <Col id="sponsor" md={{size: 'auto'}}><img src={chanel} alt="Logo" /></Col>
-                            <Col id="sponsor" md={{size: 'auto'}}><img src={booz} alt="Logo" /></Col>
+                            <Col id="sponsor" md={{size: 'auto'}}><img src={eficode} alt="Logo" /></Col>
                         </Row>
                     </Navbar>
                 </footer>

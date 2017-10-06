@@ -73,7 +73,7 @@ p a:hover {
 }
 
 #sponsor > img {
-    max-height: 50px;
+    max-height: 80px;
 }
 
 .container {
@@ -241,6 +241,11 @@ th, td {
     border-bottom: 3px solid #ca55ea;
     color: white;
     background-color: transparent;
+}
+
+.mad-field {
+    color: red;
+    display: inline;
 }
 
 .form-check {

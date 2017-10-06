@@ -21,8 +21,8 @@ class Home extends React.Component {
                                 Rantasaunalla vietettävä legendaarinen silliaamiainen Stillis!
                             </p>
                             <p>
-                                Illalliskortin hinta on opiskelijoille N euroa ja valmistuneille N+1 euroa. Sillislipun hinta on X euroa ilmoittautumisen
-                                yhteydessä ja X+2 euroa erikseen tai suoraan ovelta (mikäli lippuja jää).
+                                Illalliskortin hinta on opiskelijoille 75 euroa ja valmistuneille 90 euroa. Stillislipun hinta on 15 euroa ilmoittautumisen
+                                yhteydessä.
                             </p>
                             <p>
                                 Juhla- tai tumma puku sekä akateemiset kunniamerkit.

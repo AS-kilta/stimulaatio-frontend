@@ -12,7 +12,7 @@ class Program extends React.Component {
                         <div className="program-content">
                             <h2>Perjantai 1.12.</h2>
                             <p>
-                                <b>17.00</b> - Cocktailtilaisuus,
+                                <b>16.00</b> - Cocktailtilaisuus,
                                 TUAS-talo (<a href="https://www.google.fi/maps/place/Maarintie+8,+02150+Espoo/@60.1867263,24.8166308,17z/data=!3m1!4b1!4m5!3m4!1s0x468df5eb2f84cc95:0x1f13f2fbc064e8d!8m2!3d60.1867263!4d24.8188195?hl=fi">Maarintie 8, 02150 Espoo</a>)
                             </p>
                             <p>
