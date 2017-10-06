@@ -18,7 +18,7 @@ class Info extends React.Component {
                             </p>
 
                             <p>
-                                Edesmenneen TKY:n etikettiopas löytyy edellistä laajempi oppimäärä juhlaetikettiin
+                                Edesmenneen TKY:n etikettioppaasta löytyy edellistä laajempi oppimäärä juhlaetikettiin
                                 ja kaikkeen vuosijuhliin liittyvään. Kirjoittanut Tiina Metso.<br/>
                                 <a href="http://as.fi/stimulaatio/etiketti_tky.pdf">Tavoistaan teekkari tunnetaan</a> [PDF, 1.25MB]
                             </p>

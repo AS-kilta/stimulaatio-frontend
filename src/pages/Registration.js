@@ -46,7 +46,7 @@ class Registration extends React.Component {
                     <div>
                         <Container>
                             <Route exact path="/ilmoittautuminen" component={RegistrationInfo} />
-                            <Route path="/ilmoittautuminen/lomake" component={form} />
+                            <Route path="/ilmoittautuminen/lomake" component={RegistrationNotOpen} />
                             <Route path="/ilmoittautuminen/osallistujat" component={RegistrationParticipants} />
                             <Route path="/ilmoittautuminen/maksutiedot" component={RegistrationPayment} />
                         </Container>
@@ -68,9 +68,9 @@ class RegistrationInfo extends React.Component {
         return(
             <div>
                 <p>
-                    Ilmoittautuminen aukeaa 1.11.2017 kello 12:00 ja sulkeutuu 2.11.2017 kutsuvieraille
-                    ja 12.11.2017 kiltalaisille. Kutsuvierasilmoittautumisen sulkeutumisen jälkeen
-                    täyttämättä jääneet paikat vapautetaan kiltalaisille.
+                    Ilmoittautuminen aukeaa 19.10.2017 ja sulkeutuu 2.11.2017 kutsuvieraille
+                    ja 12.11.2017 muille. Kutsuvierasilmoittautumisen sulkeutumisen jälkeen
+                    täyttämättä jääneet paikat vapautetaan muille.
                 </p>
             </div>
         );
@@ -93,7 +93,7 @@ class RegistrationPayment extends React.Component {
                     IBAN: FI84 3131 3001 8081 61<br/>
                     Viesti: Stimulaatio 2017, "Oma Nimi"<br/>
                     Hinta: 75 € (opiskelija) tai 90 € (valmistunut), Stillis 15 €<br/>
-                    Eräpäivä: 12.11.2017
+                    Eräpäivä: 19.11.2017
                 </p>
             </div>
         );
@@ -129,7 +129,7 @@ class RegistrationNotOpen extends React.Component {
     render() {
         return(
             <div>
-                Ilmoittautuminen aukeaa joskus.
+                Ilmoittautuminen aukeaa torstaina 19.10.2017.
             </div>
         );
     }
