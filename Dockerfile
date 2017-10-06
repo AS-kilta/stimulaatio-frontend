@@ -4,11 +4,13 @@ FROM node:8.6.0-alpine
 RUN mkdir -p /usr/src/app
 WORKDIR /usr/src/app
 
+# Clone stuff from GitHub
+RUN apk update && apk add git
+RUN git clone https://github.com/Qaapu/stimulaatio.git
+WORKDIR /usr/src/app/stimulaatio
+
 # Install app dependencies
-COPY package.json /usr/src/app/
 RUN npm install
 
-# Bundle app source
-COPY . /usr/src/app
-
+# Run app
 CMD [ "npm", "start" ]
