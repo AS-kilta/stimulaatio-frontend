@@ -25,7 +25,7 @@ class Home extends React.Component {
                                 yhteydessä.
                             </p>
                             <p>
-                                Juhla- tai tumma puku sekä akateemiset kunniamerkit..
+                                Juhla- tai tumma puku sekä akateemiset kunniamerkit.
                             </p>
                         </div>
                     </Col>
