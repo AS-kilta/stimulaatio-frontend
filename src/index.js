@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import 'bootstrap/dist/css/bootstrap.css';
-import { Container, Col, Nav, Navbar, NavItem, NavLink, NavbarToggler, Collapse, Row } from 'reactstrap';
+import { Col, Nav, Navbar, NavItem, NavLink, NavbarToggler, Collapse, Row } from 'reactstrap';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 
 import Info from './pages/Info';

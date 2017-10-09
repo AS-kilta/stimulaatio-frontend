@@ -1,6 +1,6 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.css';
-import { Button, Col, Form, Nav, Container, FormFeedback, FormGroup, Label, Input, FormText, Navbar, NavItem, NavLink } from 'reactstrap';
+import { Button, Col, Form, Nav, Container, FormGroup, Label, Input, FormText, Navbar, NavItem, NavLink } from 'reactstrap';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import '../styles/index.css';
 
@@ -25,14 +25,6 @@ class Registration extends React.Component {
     }
 
     render() {
-        let form = null;
-
-        if (this.formTimer()) {
-            form = RegistrationForm;
-        } else {
-            form = RegistrationNotOpen;
-        }
-
         return(
             <Router>
                 <div>
@@ -208,7 +200,7 @@ class RegistrationForm extends React.Component {
             this.state.mad_last_name &&
             this.state.mad_email &&
             this.state.mad_menu_type &&
-            this.state.mad_ticket_type == "") {
+            this.state.mad_ticket_type === "") {
             missing_values = false;
         }
 
