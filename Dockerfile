@@ -12,5 +12,9 @@ WORKDIR /usr/src/app/stimulaatio
 # Install app dependencies
 RUN npm install
 
+# Create a production build
+RUN npm run build
+RUN npm install -g serve
+
 # Run app
-CMD [ "npm", "start" ]
+CMD [ "serve", "-s", "build" ]
