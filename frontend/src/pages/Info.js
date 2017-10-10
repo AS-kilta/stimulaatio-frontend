@@ -2,9 +2,6 @@ import React from 'react';
 import { Container, Col, Row } from 'reactstrap';
 import '../styles/index.css';
 
-import etiketti2008 from '../files/etiketti2008.pdf';
-import etiketti_tky from '../files/etiketti_tky.pdf';
-
 class Info extends React.Component {
     render() {
         return(
