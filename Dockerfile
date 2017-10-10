@@ -16,5 +16,8 @@ RUN npm install
 RUN npm run build
 RUN npm install -g serve
 
+# Copy files to build
+RUN cp src/files/* build
+
 # Run app
 CMD [ "serve", "-s", "build" ]

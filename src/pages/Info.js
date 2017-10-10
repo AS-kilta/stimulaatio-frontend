@@ -17,13 +17,13 @@ class Info extends React.Component {
                             <p>
                                 Killan kymmenvuotisjuhliin kasattiin erinomainen rautaisannos Stimulaatioetiketistä,
                                 pukeutumisesta, käytöstavoista ja juhlan kulusta. Koonnut Riikka Liedes.<br/>
-                                <a href='../files/etiketti2008.pdf'>Vuosijuhlaetiketti - Muistia virkistämään Stimulaatioon 2008</a> [PDF, 267KB]
+                                <a href='/etiketti2008.pdf'>Vuosijuhlaetiketti - Muistia virkistämään Stimulaatioon 2008</a> [PDF, 267KB]
                             </p>
 
                             <p>
                                 Edesmenneen TKY:n etikettioppaasta löytyy edellistä laajempi oppimäärä juhlaetikettiin
                                 ja kaikkeen vuosijuhliin liittyvään. Kirjoittanut Tiina Metso.<br/>
-                                <a href='../files/etiketti_tky.pdf'pdf>Tavoistaan teekkari tunnetaan</a> [PDF, 1.25MB]
+                                <a href='/etiketti_tky.pdf'pdf>Tavoistaan teekkari tunnetaan</a> [PDF, 1.25MB]
                             </p>
                         </div>
                         <div className="info-content">
