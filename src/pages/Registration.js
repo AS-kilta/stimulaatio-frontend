@@ -113,7 +113,7 @@ class RegistrationParticipants extends React.Component {
     }
 
     updateParticipants() {
-        axios.get('http://127.0.0.1:8000/api/registration/')
+        axios.get('http://' + process.env.REACT_APP_BACKEND +'/api/registration/')
             .then(response => {
                 this.setState({participants: response.data});
             });
@@ -257,7 +257,7 @@ class RegistrationForm extends React.Component {
         if (this.validateForm()) {
             axios({
                 method: 'post',
-                url: 'http://127.0.0.1:8000/api/registration/',
+                url: 'http://' + process.env.REACT_APP_BACKEND +'/api/registration/',
                 data: this.state,
             })
             .then(response => {
