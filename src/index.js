@@ -67,7 +67,7 @@ class Stimulaatio extends React.Component {
                             <Col>Yhteistyössä</Col>
                         </Row>
                         <Row id="sponsor-container">
-                            <Col id="sponsor" md={{size: 'auto'}}><img src={eficode} alt="Logo" /></Col>
+                            <Col id="sponsor" md={{size: 'auto'}}><a href="https://eficode.com" target="_blank"><img src={eficode} alt="Eficode" /></a></Col>
                         </Row>
                     </Navbar>
                 </footer>

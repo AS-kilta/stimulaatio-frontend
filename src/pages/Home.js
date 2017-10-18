@@ -11,9 +11,9 @@ class Home extends React.Component {
                 <Row>
                     <Col>
                         <div className="home-content">
-                            <h5>
+                            <h2>
                                 Tervetuloa Stimulaatioon!
-                            </h5>
+                            </h2>
                             <p>
                                 Automaatio- ja systeemitekniikan killan 19. vuosijuhla Stimulaatio XIX järjestetään perjantaina 1.12.2017. Juhlat alkavat
                                 klassisesti cocktailtilaisuudella TUAS-talolla,
