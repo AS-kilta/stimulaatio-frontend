@@ -113,6 +113,7 @@ class RegistrationParticipants extends React.Component {
     }
 
     updateParticipants() {
+        console.log("REACT_APP_BACKEND: " + process.env.REACT_APP_BACKEND);
         axios.get('http://' + process.env.REACT_APP_BACKEND + '/api/registration/')
             .then(response => {
                 this.setState({participants: response.data});
