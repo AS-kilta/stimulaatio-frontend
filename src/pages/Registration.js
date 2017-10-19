@@ -27,7 +27,7 @@ class Registration extends React.Component {
                     <div>
                         <Container>
                             <Route exact path="/ilmoittautuminen" component={RegistrationInfo} />
-                            <Route path="/ilmoittautuminen/lomake" component={RegistrationNotOpen} />
+                            <Route path="/ilmoittautuminen/lomake" component={RegistrationForm} />
                             <Route path="/ilmoittautuminen/osallistujat" component={RegistrationParticipants} />
                             <Route path="/ilmoittautuminen/maksutiedot" component={RegistrationPayment} />
                         </Container>
