@@ -113,8 +113,7 @@ class RegistrationParticipants extends React.Component {
     }
 
     updateParticipants() {
-        console.log("REACT_APP_BACKEND: " + process.env.REACT_APP_BACKEND);
-        axios.get('http://' + process.env.REACT_APP_BACKEND + '/api/registration/')
+        axios.get('http://127.0.0.1:8000/api/registration/')
             .then(response => {
                 this.setState({participants: response.data});
             });
@@ -176,6 +175,7 @@ class RegistrationForm extends React.Component {
             greeting_group_validation: '',
             form_invalid: false,
             email_invalid: false,
+            button_text: 'Lähetä',
         };
 
         this.handleSubmit = this.handleSubmit.bind(this);
@@ -256,12 +256,14 @@ class RegistrationForm extends React.Component {
 
         console.log(this.state.greeting_group);
         if (this.validateForm()) {
+            this.setState({button_text: 'Lataa...'});
             axios({
                 method: 'post',
-                url: 'http://' + process.env.REACT_APP_BACKEND + '/api/registration/',
+                url: 'http://127.0.0.1:8000/api/registration/',
                 data: this.state,
             })
             .then(response => {
+                this.setState({button_text: 'Lähetä'})
                 if (response.status == '201') {
                     this.clearForm();
                     this.toggleModal();
@@ -270,6 +272,7 @@ class RegistrationForm extends React.Component {
                 }
             })
             .catch(error => {
+                this.setState({button_text: 'Lähetä'})
                 this.setState({errorText: "ERROR " + error.response.status + " " + error.response.statusText});
                 this.toggleErrorModal();
             });
@@ -301,6 +304,7 @@ class RegistrationForm extends React.Component {
             greeting_group_validation: '',
             form_invalid: false,
             email_invalid: false,
+            button_text: 'Lähetä',
         });
 
         document.getElementById("registration-form").reset();
@@ -440,7 +444,7 @@ class RegistrationForm extends React.Component {
                     <FormFeedback><div className="mad-field">Tarkista kentät!</div></FormFeedback>
                     : null
                 }
-                <Button>Lähetä</Button>
+                <Button disabled={this.state.button_text == 'Lataa...' ? true : false}>{this.state.button_text}</Button>
             </Form>
         );
     }
