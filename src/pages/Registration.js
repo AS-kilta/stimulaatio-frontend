@@ -11,18 +11,6 @@ import 'react-bootstrap-table/dist/react-bootstrap-table-all.min.css';
 class Registration extends React.Component {
     constructor() {
         super();
-
-        this.formTimer = this.formTimer.bind(this);
-    }
-
-    formTimer() {
-        var currentTime = new Date();
-        var openTime = new Date(2017, 8, 24, 21, 46, 0, 0);
-
-        if (currentTime > openTime) {
-            return true;
-        }
-        return false;
     }
 
     render() {
@@ -113,7 +101,7 @@ class RegistrationParticipants extends React.Component {
     }
 
     updateParticipants() {
-        axios.get('http://' + process.env.REACT_APP_BACKEND + '/api/registration/')
+        axios.get('http://stimulaatio.as.fi/api/registration/')
             .then(response => {
                 this.setState({participants: response.data});
             });
@@ -259,7 +247,7 @@ class RegistrationForm extends React.Component {
             this.setState({button_text: 'Lataa...'});
             axios({
                 method: 'post',
-                url: 'http://' + process.env.REACT_APP_BACKEND + '/api/registration/',
+                url: 'http://stimulaatio.as.fi/api/registration/',
                 data: this.state,
             })
             .then(response => {
