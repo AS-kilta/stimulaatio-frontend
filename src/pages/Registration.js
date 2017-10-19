@@ -105,9 +105,11 @@ class RegistrationParticipants extends React.Component {
         var USERNAME = `process.env.REACT_APP_API_USER`;
         var PASSWORD = `process.env.REACT_APP_API_PASS`;
 
-        axios.get('http://stimulaatio.as.fi/api/registration/', auth: {
-            username: USERNAME,
-            password: PASSWORD,
+        axios.get('http://stimulaatio.as.fi/api/registration/', {
+            auth: {
+                username: USERNAME,
+                password: PASSWORD,
+            }
         })
             .then(response => {
                 this.setState({participants: response.data});
