@@ -31,7 +31,7 @@ class Registration extends React.Component {
                 <div>
                     <Navbar id="registration-navbar" color="faded" light toggleable>
                         <Nav navbar>
-                            <NavItem><NavLink href="/ilmoittautuminen/lomake">Ilmoittautudu</NavLink></NavItem>
+                            <NavItem><NavLink href="/ilmoittautuminen/lomake">Ilmoittaudu</NavLink></NavItem>
                             <NavItem><NavLink href="/ilmoittautuminen/osallistujat">Ilmoittautuneet</NavLink></NavItem>
                             <NavItem><NavLink href="/ilmoittautuminen/maksutiedot">Maksutiedot</NavLink></NavItem>
                         </Nav>
@@ -492,7 +492,6 @@ class RegistrationForm extends React.Component {
             <div className="registration-container">
                 <h1>Ilmoittautuminen</h1>
                 <div id="form-container">
-                    <Button onClick={this.clearForm}>Clear</Button>
                     {this.eventForm()}
                     {this.formModal()}
                     {this.formErrorModal()}
