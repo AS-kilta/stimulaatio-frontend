@@ -101,9 +101,13 @@ class RegistrationParticipants extends React.Component {
     }
 
     updateParticipants() {
+
+        var USERNAME = `process.env.REACT_APP_API_USER`;
+        var PASSWORD = `process.env.REACT_APP_API_PASS`;
+
         axios.get('http://stimulaatio.as.fi/api/registration/', auth: {
-            username: `process.env.REACT_APP_API_USER`,
-            password: `process.env.REACT_APP_API_PASS`,
+            username: USERNAME,
+            password: PASSWORD,
         })
             .then(response => {
                 this.setState({participants: response.data});
@@ -245,6 +249,9 @@ class RegistrationForm extends React.Component {
     handleSubmit(event) {
         event.preventDefault();
 
+        var USERNAME = `process.env.REACT_APP_API_USER`;
+        var PASSWORD = `process.env.REACT_APP_API_PASS`;
+
         console.log(this.state.greeting_group);
         if (this.validateForm()) {
             this.setState({button_text: 'Lataa...'});
@@ -253,8 +260,8 @@ class RegistrationForm extends React.Component {
                 url: 'http://stimulaatio.as.fi/api/registration/',
                 data: this.state,
                 auth: {
-                    username: `process.env.REACT_APP_API_USER`,
-                    password: `process.env.REACT_APP_API_PASS`,
+                    username: USERNAME,
+                    password: PASSWORD,
                 },
             })
             .then(response => {
