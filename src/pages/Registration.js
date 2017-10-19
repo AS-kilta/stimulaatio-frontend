@@ -27,7 +27,7 @@ class Registration extends React.Component {
                     <div>
                         <Container>
                             <Route exact path="/ilmoittautuminen" component={RegistrationInfo} />
-                            <Route path="/ilmoittautuminen/lomake" component={RegistrationForm} />
+                            <Route path="/ilmoittautuminen/lomake" component={RegistrationNotOpen} />
                             <Route path="/ilmoittautuminen/osallistujat" component={RegistrationParticipants} />
                             <Route path="/ilmoittautuminen/maksutiedot" component={RegistrationPayment} />
                         </Container>
@@ -129,7 +129,7 @@ class RegistrationNotOpen extends React.Component {
     render() {
         return(
             <div>
-                Ilmoittautuminen aukeaa torstaina 19.10.2017.
+                Ilmoittautuminen aukeaa lähiaikoina. Stay tuned!
             </div>
         );
     }
