@@ -101,7 +101,10 @@ class RegistrationParticipants extends React.Component {
     }
 
     updateParticipants() {
-        axios.get('http://stimulaatio.as.fi/api/registration/')
+        axios.get('http://stimulaatio.as.fi/api/registration/', auth: {
+            username: `process.env.REACT_APP_API_USER`,
+            password: `process.env.REACT_APP_API_PASS`,
+        })
             .then(response => {
                 this.setState({participants: response.data});
             });
@@ -249,6 +252,10 @@ class RegistrationForm extends React.Component {
                 method: 'post',
                 url: 'http://stimulaatio.as.fi/api/registration/',
                 data: this.state,
+                auth: {
+                    username: `process.env.REACT_APP_API_USER`,
+                    password: `process.env.REACT_APP_API_PASS`,
+                },
             })
             .then(response => {
                 this.setState({button_text: 'Lähetä'})
