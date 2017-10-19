@@ -104,7 +104,6 @@ class RegistrationParticipants extends React.Component {
 
         var USERNAME = `${process.env.REACT_APP_API_USER}`;
         var PASSWORD = `${process.env.REACT_APP_API_PASS}`;
-        console.log(USERNAME);
 
         axios.get('http://stimulaatio.as.fi/api/registration/', {
             auth: {
@@ -232,7 +231,6 @@ class RegistrationForm extends React.Component {
         }
 
         if ((this.state.greeting || this.state.is_invited) && this.state.greeting_group == '') {
-            console.log("Hello")
             this.setState({greeting_group_validation: 'danger'});
             is_invalid = true;
         } else {
@@ -244,7 +242,6 @@ class RegistrationForm extends React.Component {
              return false;
          } else {
              this.setState({form_invalid: false});
-             console.log(this.state)
              return true;
          }
     }
@@ -255,7 +252,6 @@ class RegistrationForm extends React.Component {
         var USERNAME = `${process.env.REACT_APP_API_USER}`;
         var PASSWORD = `${process.env.REACT_APP_API_PASS}`;
 
-        console.log(this.state.greeting_group);
         if (this.validateForm()) {
             this.setState({button_text: 'Lataa...'});
             axios({
@@ -315,8 +311,6 @@ class RegistrationForm extends React.Component {
         document.getElementById("registration-form").reset();
         document.getElementById("ticket_type").value = "";
         document.getElementById("menu_type").value = "";
-
-        console.log(this.state);
     }
 
     handleInputChange(event) {
