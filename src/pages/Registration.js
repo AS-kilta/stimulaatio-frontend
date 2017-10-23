@@ -351,7 +351,7 @@ class RegistrationForm extends React.Component {
                     <Label for="ticket_type" md={3}>Lipputyyppi <div className="mad-field">*</div></Label>
                     <Col xs="12" sm="12" md="8">
                         <Input type="select" name="ticket_type" id="ticket_type" onChange={this.handleInputChange} >
-                            <option value="" selected disabled>Valitse Lipputyyppi</option>
+                            <option value="" selected disabled>Valitse lipputyyppi</option>
                             <option value="student">Opiskelija (á 75€)</option>
                             <option value="full">Valmistunut (á 90€)</option>
                             <option value="free">Tarjottu (á 0€)</option>

@@ -30,7 +30,7 @@ class Info extends React.Component {
                             </p>
                             <p>
                                 Paul Laihonen<br/>
-                                paul.laihonen (at) aalto.fi<br/>
+                                stimulantti (at) as.fi<br/>
                                 <a href="https://telegram.me/paulig">@Paulig</a>
                             </p>
                         </div>

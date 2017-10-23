@@ -230,7 +230,7 @@ th, td {
 
 .form-control {
     border-radius: 0;
-    background-color: transparent;
+    background-color: #0f117e;
     border: 0;
     border-bottom: 3px solid #3a3bb7;
     font-family: 'Raleway', sans-serif;
