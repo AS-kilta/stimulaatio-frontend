@@ -48,11 +48,9 @@ class RegistrationInfo extends React.Component {
     render() {
         return(
             <div>
-                <p>
-                    Ilmoittautuminen aukeaa 19.10.2017 ja sulkeutuu kutsuvieraille 2.11.2017
-                    ja muille 12.11.2017. Kutsuvierasilmoittautumisen sulkeutumisen jälkeen
-                    täyttämättä jääneet paikat vapautetaan muille.
-                </p>
+                <p>19.10.2017 - Ilmoittautuminen aukeaa kaikille vieraille</p>
+                <p>2.11.2017 - Kutsuvieraiden ilmoittautuminen sulkeutuu</p>
+                <p>12.11.2017 - Ilmoittautuminen sulkeutuu</p>
             </div>
         );
     }
