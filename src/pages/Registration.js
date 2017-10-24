@@ -48,9 +48,9 @@ class RegistrationInfo extends React.Component {
     render() {
         return(
             <div>
-                <p>19.10.2017 - Ilmoittautuminen aukeaa kaikille vieraille</p>
-                <p>2.11.2017 - Kutsuvieraiden ilmoittautuminen sulkeutuu</p>
-                <p>12.11.2017 - Ilmoittautuminen sulkeutuu</p>
+                <p><b>19.10.2017</b> - Ilmoittautuminen aukeaa kaikille vieraille</p>
+                <p><b>2.11.2017</b> - Kutsuvieraiden ilmoittautuminen sulkeutuu</p>
+                <p><b>12.11.2017</b> - Ilmoittautuminen sulkeutuu</p>
             </div>
         );
     }
