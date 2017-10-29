@@ -31,7 +31,7 @@ class Info extends React.Component {
                             <p>
                                 Paul Laihonen<br/>
                                 stimulantti (at) as.fi<br/>
-                                <a href="https://telegram.me/paulig">@Paulig</a>
+                                <a href="https://telegram.me/Paulig">@Paulig</a>
                             </p>
                         </div>
                     </Col>
