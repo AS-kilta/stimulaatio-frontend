@@ -246,8 +246,8 @@ class RegistrationForm extends React.Component {
                     <Col xs="12" sm="12" md="8">
                         <FormGroup check>
                             <Label check>
-                                <Input type="checkbox" name="is_invited" id="is_invited" checked={this.state.is_invited} onChange={this.handleInputChange} />{' '}
-                                Olen kutsuvieras
+                                <Input disabled type="checkbox" name="is_invited" id="is_invited" checked={this.state.is_invited} onChange={this.handleInputChange} />{' '}
+                                Olen kutsuvieras (suljettu)
                             </Label>
                         </FormGroup>
                     </Col>

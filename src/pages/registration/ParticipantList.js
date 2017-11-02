@@ -25,7 +25,8 @@ class ParticipantList extends React.Component {
         var USERNAME = `${process.env.REACT_APP_API_USERNAME}`;
         var PASSWORD = `${process.env.REACT_APP_API_PASSWORD}`;
 
-        axios({method: 'get',
+        axios({
+            method: 'get',
             url: ENDPOINT,
             auth: {
                 username: USERNAME,
