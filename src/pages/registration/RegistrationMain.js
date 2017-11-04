@@ -1,15 +1,10 @@
 import React from 'react';
+import ReactMarkdown from 'react-markdown';
 
-class RegistrationMain extends React.Component {
-    render() {
-        return(
-            <div>
-                <p><b>19.10.2017</b> - Ilmoittautuminen aukeaa kaikille vieraille</p>
-                <p><b>2.11.2017</b> - Kutsuvieraiden ilmoittautuminen sulkeutuu</p>
-                <p><b>12.11.2017</b> - Ilmoittautuminen sulkeutuu</p>
-            </div>
-        );
-    }
+import registrationMain from '../../content/registration/registration-main.js'
+
+export default function RegistrationMain() {
+  return (
+    <ReactMarkdown source={registrationMain} className="registration-container"/>
+  );
 }
-
-export default RegistrationMain;

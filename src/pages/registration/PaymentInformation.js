@@ -1,20 +1,10 @@
 import React from 'react';
+import ReactMarkdown from 'react-markdown';
 
-class PaymentInformation extends React.Component {
-    render() {
-        return(
-            <div className="registration-container">
-                <h1>Maksutiedot</h1>
-                <p>
-                    Saaja: Automaatio- ja systeemitekniikan kilta ry<br/>
-                    IBAN: FI84 3131 3001 8081 61<br/>
-                    Viesti: Stimulaatio 2017, "Oma Nimi"<br/>
-                    Hinta: 75 € (opiskelija) tai 90 € (valmistunut), Stillis 15 €<br/>
-                    Eräpäivä: 19.11.2017
-                </p>
-            </div>
-        );
-    }
+import paymentInformation from '../../content/registration/payment-information.js'
+
+export default function PaymentInformation() {
+  return (
+    <ReactMarkdown source={paymentInformation} className="registration-container"/>
+  );
 }
-
-export default PaymentInformation;
