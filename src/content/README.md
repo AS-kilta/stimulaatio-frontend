@@ -4,5 +4,5 @@ Format example:
 
     export default `
     # Header
-    Some body and a [link-to-google](http://google.com).
+    Some body and a [link-to-google](https://google.com).
     `;
