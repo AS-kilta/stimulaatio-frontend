@@ -1,14 +1,13 @@
 import React from 'react';
 import {Container} from 'reactstrap';
-import '../styles/index.css';
 import ReactMarkdown from 'react-markdown';
 
 import program from '../content/program.js';
 
 export default function Program() {
-  return(
+  return (
     <Container>
-      <ReactMarkdown source={program} className="content" />
+      <ReactMarkdown source={program} className="content"/>
     </Container>
   );
 }
