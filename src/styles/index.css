@@ -23,7 +23,7 @@ h1 {
 h1:after{
     content:'';
     position: absolute;
-    top: 45px;
+    top: 75px;
     left: 50%;
     margin-left: -20px;
     width: 0;
@@ -41,6 +41,7 @@ h2, h3, h4 {
     text-transform: uppercase;
     font-weight: 600;
     font-size: 26px;
+    padding-top: 10px;
 }
 
 h5 {
@@ -52,7 +53,7 @@ h5 {
     font-size: 18px;
 }
 
-b, a {
+b, a, strong {
     color: #ca55ea;
 }
 
@@ -165,23 +166,6 @@ Label {
     }
 }
 
-.info-content {
-    padding-top: 20px;
-}
-
-.home-content {
-    padding-top: 20px;
-    text-align: center;
-}
-
-.program-content {
-    padding-top: 20px;
-    text-align: center;
-}
-
-.content {
-    text-align: center;
-}
 
 #sponsor {
     padding: 12px;
