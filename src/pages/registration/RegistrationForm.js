@@ -367,7 +367,7 @@ export class RegistrationForm extends React.Component {
 
   formClosed() {
     return (
-      <h5>Ilmoittautuminen on päättynyt.</h5>
+      <h5>Ilmoittautuminen on päättynyt. Mahdollisia peruutuspaikkoja voi kysellä Stimulantilta.</h5>
     );
   }
 
