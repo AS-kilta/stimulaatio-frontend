@@ -4,7 +4,7 @@ import ReactMarkdown from 'react-markdown';
 
 import home from '../content/home.js';
 
-export default function Home() {
+export function Home() {
   return (
     <Container>
       <ReactMarkdown source={home} className="content"/>

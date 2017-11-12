@@ -16,10 +16,7 @@ import {
 
 // React Router
 import {BrowserRouter as Router, Route} from 'react-router-dom';
-import Info from './pages/Info';
-import Home from './pages/Home';
-import Program from './pages/Program';
-import Registration from './pages/Registration';
+import {Info, Home, Program, Registration} from './pages';
 
 // Images
 import eficode from './img/eficode.svg';
@@ -103,4 +100,5 @@ class Stimulaatio extends React.Component {
 }
 
 ReactDOM.render(
-  <Stimulaatio/>, document.getElementById('root'))
+  <Stimulaatio/>,
+  document.getElementById('root'))

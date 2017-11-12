@@ -4,7 +4,7 @@ import ReactMarkdown from 'react-markdown';
 
 import info from '../content/info.js'
 
-export default function Info() {
+export function Info() {
   return (
     <Container>
       <ReactMarkdown source={info} className="content"/>

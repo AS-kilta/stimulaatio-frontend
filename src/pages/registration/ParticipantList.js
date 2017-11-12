@@ -5,7 +5,7 @@ import {BootstrapTable, TableHeaderColumn} from 'react-bootstrap-table';
 import 'react-bootstrap-table/dist/react-bootstrap-table-all.min.css';
 import '../../styles/index.css';
 
-class ParticipantList extends React.Component {
+export class ParticipantList extends React.Component {
     constructor() {
         super();
 
@@ -82,5 +82,3 @@ class ParticipantList extends React.Component {
         );
     }
 }
-
-export default ParticipantList;
