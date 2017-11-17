@@ -76,8 +76,9 @@ p a:hover {
     height: auto;
 }
 
-#sponsor > img {
+#sponsor img {
     max-height: 80px;
+    max-width: 200px;
 }
 
 .container {
@@ -172,6 +173,7 @@ Label {
 
 #sponsor {
     padding: 12px;
+    align-self: center;
 }
 
 #sponsor-container {

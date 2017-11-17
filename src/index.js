@@ -20,6 +20,7 @@ import {Info, Home, Program, Registration} from './pages';
 
 // Images
 import eficode from './img/eficode.svg';
+import tek from './img/TEK.png';
 import header from './img/header.png';
 
 // Styles
@@ -90,6 +91,11 @@ class Stimulaatio extends React.Component {
                 size: 'auto'
               }}>
                 <a href="https://eficode.com/" target="_blank" rel="noopener noreferrer"><img src={eficode} alt="Eficode"/></a>
+              </Col>
+              <Col id="sponsor" md={{
+                size: 'auto'
+              }}>
+                <a href="https://tek.fi/" target="_blank" rel="noopener noreferrer"><img src={tek} alt="TEK"/></a>
               </Col>
             </Row>
           </Navbar>
