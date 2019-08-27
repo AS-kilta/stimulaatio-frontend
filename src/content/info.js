@@ -11,7 +11,7 @@ Edesmenneen TKY:n etikettioppaasta löytyy edellistä laajempi oppimäärä juhl
 ### Yhteystiedot
 Juhlia koskeviin kysymyksiin vastaa Stimulantti
 
-Paul Laihonen  
+Etunimi Sukunimi 
 stimulantti (at) as.fi  
-[@Paulig](https://telegram.me/Paulig)
+[@tgnikki](https://telegram.me/tgnikki)
 `;

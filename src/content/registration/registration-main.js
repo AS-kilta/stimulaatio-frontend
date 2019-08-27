@@ -1,7 +1,7 @@
 export default `
-**19.10.2017** - Ilmoittautuminen aukeaa kaikille vieraille
+**1.10.2019** - Ilmoittautuminen aukeaa kutsuvieraille ja killan toimihenkilöille.
 
-**2.11.2017** - Kutsuvieraiden ilmoittautuminen sulkeutuu
+**8.10.2019** - Ilmoittautuminen aukeaa kaikille vieraille.
 
-**12.11.2017** - Ilmoittautuminen sulkeutuu
+**15.10.2019** - Ilmoittautuminen sulkeutuu.
 `;

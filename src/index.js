@@ -21,7 +21,7 @@ import {Info, Home, Program, Registration} from './pages';
 // Images
 import eficode from './img/eficode.svg';
 import tek from './img/TEK.png';
-import header from './img/header.png';
+import header from './img/placeholder_header.jpg';
 
 // Styles
 import './styles/index.css';
