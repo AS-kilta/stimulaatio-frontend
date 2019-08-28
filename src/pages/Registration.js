@@ -1,12 +1,14 @@
 import React from 'react';
-import {Nav, Container, Navbar, NavItem, NavLink} from 'reactstrap';
+import {Nav, Container, Navbar} from 'reactstrap';
 import {BrowserRouter as Router, Route} from 'react-router-dom';
 
 import 'bootstrap/dist/css/bootstrap.css';
 import 'react-bootstrap-table/dist/react-bootstrap-table-all.min.css';
 import '../styles/index.css';
+import '../components/NavigationTo.js';
 
 import {RegistrationMain, RegistrationForm, ParticipantList, PaymentInformation} from '.';
+import NavigationTo from '../components/NavigationTo.js';
 
 export function Registration() {
   return (
@@ -14,15 +16,9 @@ export function Registration() {
       <div>
         <Navbar id="registration-navbar" color="faded" light toggleable>
           <Nav navbar>
-            <NavItem>
-              <NavLink href="/ilmoittautuminen/ilmoittaudu">Ilmoittaudu</NavLink>
-            </NavItem>
-            <NavItem>
-              <NavLink href="/ilmoittautuminen/ilmoittautuneet">Ilmoittautuneet</NavLink>
-            </NavItem>
-            <NavItem>
-              <NavLink href="/ilmoittautuminen/maksutiedot">Maksutiedot</NavLink>
-            </NavItem>
+            <NavigationTo title="Ilmoittaudu" path="/ilmoittautuminen/ilmoittaudu"/>
+            <NavigationTo title="Ilmoittautuneet" path="/ilmoittautuminen/ilmoittautuneet"/>
+            <NavigationTo title="Maksutiedot" path="/ilmoittautuminen/maksutiedot"/>
           </Nav>
         </Navbar>
         <Container>

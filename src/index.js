@@ -7,8 +7,6 @@ import {
   Col,
   Nav,
   Navbar,
-  NavItem,
-  NavLink,
   NavbarToggler,
   Collapse,
   Row
@@ -21,10 +19,21 @@ import {Info, Home, Program, Registration} from './pages';
 // Images
 import eficode from './img/eficode.svg';
 import tek from './img/TEK.png';
-import header from './img/placeholder_header.jpg';
+import header from './img/header.jpg';
 
 // Styles
 import './styles/index.css';
+
+// Components
+import NavigationTo from './components/NavigationTo.js';
+
+const HeaderImage = () => {
+  return (
+  <div className="logo-container">
+    <img src={header} alt="Stimulaatio XIX logo"/>
+  </div>
+  )
+}
 
 class Stimulaatio extends React.Component {
   constructor(props) {
@@ -45,42 +54,34 @@ class Stimulaatio extends React.Component {
   render() {
     return (
       <div id="wrapper">
+      <Router>
+        <div>
         <header>
-          <div className="logo-container">
-            <img src={header} alt="Stimulaatio XIX logo"/>
-          </div>
+          <HeaderImage />
           <div id="navibar">
             <Navbar color="faded" light toggleable>
               <NavbarToggler onClick={this.toggle}/>
               <Collapse isOpen={this.state.isOpen} navbar>
                 <Nav navbar>
-                  <NavItem>
-                    <NavLink href="/">Etusivu</NavLink>
-                  </NavItem>
-                  <NavItem>
-                    <NavLink href="/ohjelma">Ohjelma</NavLink>
-                  </NavItem>
-                  <NavItem>
-                    <NavLink href="/ilmoittautuminen">Ilmoittautuminen</NavLink>
-                  </NavItem>
-                  <NavItem>
-                    <NavLink href="/lisatietoa">Lisätietoa</NavLink>
-                  </NavItem>
+                  <NavigationTo title="Etusivu" path="/"/>
+                  <NavigationTo title="Ohjelma" path="/ohjelma"/>
+                  <NavigationTo title="Ilmoittautuminen" path="/ilmoittautuminen"/>
+                  <NavigationTo title="Lisätietoa" path="/lisatietoa"/>
                 </Nav>
               </Collapse>
             </Navbar>
           </div>
         </header>
         <div className="main-content">
-          <Router>
             <div>
               <Route exact path="/" component={Home}/>
               <Route path="/ohjelma" component={Program}/>
               <Route path="/ilmoittautuminen" component={Registration}/>
               <Route path="/lisatietoa" component={Info}/>
             </div>
-          </Router>
         </div>
+        </div>
+      </Router>
         <footer>
           <Navbar light>
             <Row id="sponsored-by">
