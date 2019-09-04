@@ -9,9 +9,11 @@ Edesmenneen TKY:n etikettioppaasta löytyy edellistä laajempi oppimäärä juhl
 [Tavoistaan teekkari tunnetaan](/etiketti_tky.pdf) [PDF, 1.25MB]
 
 ### Yhteystiedot
-Juhlia koskeviin kysymyksiin vastaa Stimulantti
+Juhlia koskeviin kysymyksiin vastaavat Stimulantit
 
-Etunimi Sukunimi 
+Sanna Halmkrona ja Noora Salminen  
 stimulantti (at) as.fi  
-[@tgnikki](https://telegram.me/tgnikki)
+[@Stimulammas](https://telegram.me/Stimulammas) 
+[@Stimufantti](https://telegram.me/Stimufantti)
 `;
+
