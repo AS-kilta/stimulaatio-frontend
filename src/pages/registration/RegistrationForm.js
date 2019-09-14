@@ -389,7 +389,7 @@ export class RegistrationForm extends React.Component {
         <div className="registration-container">
           <h1>Ilmoittautuminen</h1>
           <div id="form-container">
-            {this.formClosed()}
+            {this.formChooser()}
           </div>
         </div>
       );
