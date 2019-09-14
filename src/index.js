@@ -17,9 +17,9 @@ import {BrowserRouter as Router, Route} from 'react-router-dom';
 import {Info, Home, Program, Registration} from './pages';
 
 // Images
-import eficode from './img/eficode.svg';
-import tek from './img/TEK.png';
-import header from './img/header.jpg';
+import tuxera from './img/tuxera.png';
+import hiq from './img/HiQ.png';
+import header from './img/header_final3.png';
 
 // Styles
 import './styles/index.css';
@@ -30,7 +30,7 @@ import NavigationTo from './components/NavigationTo.js';
 const HeaderImage = () => {
   return (
   <div className="logo-container">
-    <img src={header} alt="Stimulaatio XIX logo"/>
+    <img src={header} alt="Stimulaatio XXI logo"/>
   </div>
   )
 }
@@ -91,12 +91,12 @@ class Stimulaatio extends React.Component {
               <Col id="sponsor" md={{
                 size: 'auto'
               }}>
-                <a href="https://eficode.com/" target="_blank" rel="noopener noreferrer"><img src={eficode} alt="Eficode"/></a>
+                <a href="https://tuxera.com/" target="_blank" rel="noopener noreferrer"><img src={tuxera} alt="Tuxera"/></a>
               </Col>
               <Col id="sponsor" md={{
                 size: 'auto'
               }}>
-                <a href="https://tek.fi/" target="_blank" rel="noopener noreferrer"><img src={tek} alt="TEK"/></a>
+                <a href="https://hiq.fi/" target="_blank" rel="noopener noreferrer"><img src={hiq} alt="HiQ"/></a>
               </Col>
             </Row>
           </Navbar>
