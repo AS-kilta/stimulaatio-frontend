@@ -219,7 +219,6 @@ export class RegistrationForm extends React.Component {
               <option value="" selected disabled>Valitse lipputyyppi</option>
               <option value="student">Opiskelija (á 75€)</option>
               <option value="full">Valmistunut (á 90€)</option>
-              <option value="free">Tarjottu (á 0€)</option>
             </Input>
           </Col>
         </FormGroup>
@@ -229,7 +228,7 @@ export class RegistrationForm extends React.Component {
             <FormGroup check>
               <Label check>
                 <Input type="checkbox" name="sillis" id="sillis" checked={this.state.sillis} onChange={this.handleInputChange}/>{' '}
-                Osallistun sillikselle (15€)
+                Osallistun sillikselle (20€)
               </Label>
             </FormGroup>
           </Col>
@@ -389,7 +388,7 @@ export class RegistrationForm extends React.Component {
         <div className="registration-container">
           <h1>Ilmoittautuminen</h1>
           <div id="form-container">
-            {this.formChooser()}
+            {this.formClosed()}
           </div>
         </div>
       );
