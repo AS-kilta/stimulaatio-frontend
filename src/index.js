@@ -21,6 +21,7 @@ import tuxera from './img/tuxera.png';
 import hiq from './img/HiQ.png';
 import reaktor from './img/reaktor.png';
 import academicwork from './img/academicwork.png';
+import gofore from './img/gofore.png';
 import header from './img/header_final3.png';
 
 // Styles
@@ -109,6 +110,11 @@ class Stimulaatio extends React.Component {
                 size: 'auto'
               }}>
                 <a href="https://reaktor.fi/" target="_blank" rel="noopener noreferrer"><img src={reaktor} alt="Reaktor"/></a>
+              </Col>
+              <Col id="sponsor" md={{
+                size: 'auto'
+              }}>
+                <a href="https://gofore.fi/" target="_blank" rel="noopener noreferrer"><img src={gofore} alt="Gofore"/></a>
               </Col>
             </Row>
           </Navbar>
