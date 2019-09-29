@@ -236,7 +236,7 @@ th, td {
 .form-control:focus {
     border-bottom: 3px solid #ca55ea;
     color: black;
-    background-color: transparent;
+    background-color: #white;
 }
 
 .form-control:focus:ticket_type{
