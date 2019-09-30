@@ -30,7 +30,7 @@ h1:after{
     width: 0;
     z-index:1;
     height: 0;
-    border-top: solid 20px #2629d8;
+    border-top: solid 20px #ca55ea;
     border-left: solid 15px transparent;
     border-right: solid 15px transparent;
 }
@@ -217,7 +217,7 @@ th, td {
     text-align:center !important;
     vertical-align:middle !important;
     border: 0 !important;
-    border-bottom: 2px solid #1b1c90 !important;
+    border-bottom: 2px solid #ca55ea !important;
     padding: 10px !important;
 }
 

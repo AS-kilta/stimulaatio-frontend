@@ -5,6 +5,5 @@ export default `
 
 **15.10.2019** - Ilmoittautuminen sulkeutuu.
 
-Kutsuvieraiden ja toimihenkilöiden ennakkoilmoittautumiseen on rajattu määrä paikkoja. 
-Ilmoittauduthan siis ripeästi, jos olet oikeutettu kyseiseen kiintiöön! 
+Kutsuvieraiden ja toimihenkilöiden ennakkoilmoittautumiseen on rajattu määrä paikkoja. Ilmoittauduthan siis ripeästi, jos olet oikeutettu kyseiseen kiintiöön! 
 `;
