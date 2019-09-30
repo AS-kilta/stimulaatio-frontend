@@ -275,7 +275,7 @@ export class RegistrationForm extends React.Component {
                 Olen kutsuvieras tai killan toimihenkilö.
               </Label>
               <FormText color="muted">
-                Huomaathan, että ilmoittautuminen on toistaiseksi auki vain kutsuvieraille ja killan toimihenkilöille 7.10. asti.
+                Huomaathan, että ilmoittautuminen on toistaiseksi auki vain kutsuvieraille ja killan toimihenkilöille 7.10. asti. Muille vieraille ilmoittautuminen aukeaa 8.10.
               </FormText>
             </FormGroup>
           </Col>
