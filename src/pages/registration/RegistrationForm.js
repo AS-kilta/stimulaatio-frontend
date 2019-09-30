@@ -23,7 +23,7 @@ export class RegistrationForm extends React.Component {
     super();
 
     this.state = {
-      form_open: true,
+      form_open: false,
       form: 'main',
       is_invited: true,
       first_name: '',
