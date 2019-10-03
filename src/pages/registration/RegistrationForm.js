@@ -369,7 +369,11 @@ export class RegistrationForm extends React.Component {
 
   formClosed() {
     return (
-      <h5>Ilmoittautuminen ei ole vielä alkanut.</h5>
+      <div>
+      <h5>Avoin ilmoittautuminen aukeaa 8.10.</h5>
+      <p>Kutsuvieraiden ja toimihenkilöiden kiintiö on täyttynyt.</p>
+      </div>
+//    <h5>Ilmoittautuminen ei ole vielä alkanut.</h5>
 //    <h5>Ilmoittautuminen on päättynyt. Mahdollisia peruutuspaikkoja voi kysellä Stimulantilta.</h5>
     );
   }
@@ -383,6 +387,8 @@ export class RegistrationForm extends React.Component {
             {this.formChooser()}
             {this.formModal()}
             {this.formErrorModal()}
+            <p>Julkaisemme ilmoittautuneiden nimet ja pöytäseuratoiveet <br/> 
+            ilmoittautuneet-välilehdellä.</p>
           </div>
         </div>
       );
