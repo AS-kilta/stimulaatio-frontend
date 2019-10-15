@@ -23,7 +23,7 @@ export class RegistrationForm extends React.Component {
     super();
 
     this.state = {
-      form_open: true,
+      form_open: false,
       form: 'main',
       is_invited: false,
       first_name: '',
@@ -366,12 +366,7 @@ export class RegistrationForm extends React.Component {
 
   formClosed() {
     return (
-      <div>
-      <h5>Avoin ilmoittautuminen aukeaa 8.10.</h5>
-      <p>Kutsuvieraiden ja toimihenkilöiden kiintiö on täyttynyt.</p>
-      </div>
-//    <h5>Ilmoittautuminen ei ole vielä alkanut.</h5>
-//    <h5>Ilmoittautuminen on päättynyt. Mahdollisia peruutuspaikkoja voi kysellä Stimulantilta.</h5>
+    <h5>Ilmoittautuminen on päättynyt. <br/> <br/> Mahdollisia peruutuspaikkoja voit kysellä Stimulanteilta.</h5>
     );
   }
 
