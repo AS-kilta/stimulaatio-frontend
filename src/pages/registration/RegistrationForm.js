@@ -17,13 +17,15 @@ import {
 } from 'reactstrap';
 
 import 'react-bootstrap-table/dist/react-bootstrap-table-all.min.css';
+import './components/Checkbox.js';
+import CheckBox from './components/Checkbox.js';
 
 export class RegistrationForm extends React.Component {
   constructor() {
     super();
 
     this.state = {
-      form_open: false,
+      form_open: true,
       form: 'main',
       is_invited: false,
       first_name: '',
@@ -33,7 +35,11 @@ export class RegistrationForm extends React.Component {
       sillis: false,
       table_company: '',
       avec: '',
-      special_diet: '',
+      special_diets: false,
+      special_diet: [
+        {lactosefree:false},
+        {vegan:false}
+      ],
       menu_type: '',
       greeting: false,
       greeting_group: '',
@@ -254,6 +260,15 @@ export class RegistrationForm extends React.Component {
             <Input type="textarea" name="special_diet" id="special_diet" maxLength="200" onChange={this.handleInputChange}/>
           </Col>
         </FormGroup>
+        <FormGroup row>
+        <Label for="sillis" md={3}>Erikoisruokavalio</Label>
+          <Col xs="12" sm="12" md="8">
+            <CheckBox defaultValue={this.state.special_diet} name="lactosefree" id="lactosefree" defaultChecked={this.state.special_diet[0]} onChange={this.handleInputChange} text="laktoositon"/>
+            <CheckBox defaultValue={this.state.special_diet} name="vegan" id="vegan" defaultChecked={this.state.special_diet[1]} onChange={this.handleInputChange} text="vegaani"/>
+            <CheckBox defaultValue={this.state.special_diet} name="ovo-vegan" id="ovo-vegan" defaultChecked={this.state.special_diet[2]} onChange={this.handleInputChange} text="kasvis"/>
+          </Col>
+          
+        </FormGroup>
         <FormGroup row color={this.state.menu_type_validation}>
           <Label for="menu_type" md={3}>Menu
             <div className="mad-field">*</div>
@@ -348,7 +363,7 @@ export class RegistrationForm extends React.Component {
       <Modal isOpen={this.state.errorModal} toggle={this.toggleErrorModal} className="form-modal" backdrop={false}>
         <ModalHeader toggle={this.toggleErrorModal}>Voi ei!</ModalHeader>
         <ModalBody>
-          <p>Jotain meni vikaan :(</p>
+          <p>Vuoden 2019 Stimulaatio on jo juhlittu!</p>
           <p>{this.state.errorText}</p>
         </ModalBody>
         <ModalFooter>
