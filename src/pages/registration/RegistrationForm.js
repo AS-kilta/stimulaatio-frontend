@@ -17,8 +17,6 @@ import {
 } from 'reactstrap';
 
 import 'react-bootstrap-table/dist/react-bootstrap-table-all.min.css';
-import './components/Checkbox.js';
-import CheckBox from './components/Checkbox.js';
 
 export class RegistrationForm extends React.Component {
   constructor() {
@@ -38,7 +36,8 @@ export class RegistrationForm extends React.Component {
       special_diets: false,
       special_diet: [
         {lactosefree:false},
-        {vegan:false}
+        {vegan:false},
+        {vegetarian:false},
       ],
       menu_type: '',
       greeting: false,
@@ -261,13 +260,14 @@ export class RegistrationForm extends React.Component {
           </Col>
         </FormGroup>
         <FormGroup row>
-        <Label for="sillis" md={3}>Erikoisruokavalio</Label>
+          <Label for="sillis" md={3}>Erikoisruokavalio</Label>
           <Col xs="12" sm="12" md="8">
-            <CheckBox defaultValue={this.state.special_diet} name="lactosefree" id="lactosefree" defaultChecked={this.state.special_diet[0]} onChange={this.handleInputChange} text="laktoositon"/>
-            <CheckBox defaultValue={this.state.special_diet} name="vegan" id="vegan" defaultChecked={this.state.special_diet[1]} onChange={this.handleInputChange} text="vegaani"/>
-            <CheckBox defaultValue={this.state.special_diet} name="ovo-vegan" id="ovo-vegan" defaultChecked={this.state.special_diet[2]} onChange={this.handleInputChange} text="kasvis"/>
+          <FormGroup check>
+            <Label check><Input type="checkbox" name="lactosefree" id="lactosefree" defaultChecked={this.state.special_diet[0].lactosefree} onChange={this.handleInputChange} />{' '} laktoositon </Label>
+            <Label check><Input type="checkbox" name="vegan" id="vegan" defaultChecked={this.state.special_diet[1].vegan} onChange={this.handleInputChange} />{' '} vegaani </Label>
+            <Label check><Input type="checkbox" name="ovo-vegan" id="ovo-vegan" defaultChecked={this.state.special_diet[2].vegetarian} onChange={this.handleInputChange} />{' '} kasvis </Label>
+          </FormGroup>
           </Col>
-          
         </FormGroup>
         <FormGroup row color={this.state.menu_type_validation}>
           <Label for="menu_type" md={3}>Menu
