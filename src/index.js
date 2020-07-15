@@ -4,17 +4,15 @@ import ReactDOM from 'react-dom';
 // Bootstrap
 import 'bootstrap/dist/css/bootstrap.css';
 import {
-  Col,
   Nav,
   Navbar,
   NavbarToggler,
   Collapse,
-  Row
 } from 'reactstrap';
 
 // React Router
-import {BrowserRouter as Router, Route} from 'react-router-dom';
-import {Info, Home, Program, Registration} from './pages';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
+import { Info, Home, Program, Registration } from './pages';
 
 // Images
 import tuxera from './img/tuxera.png';
@@ -32,9 +30,9 @@ import NavigationTo from './components/NavigationTo.js';
 
 const HeaderImage = () => {
   return (
-  <div className="logo-container">
-    <img src={header} alt="Stimulaatio XXI logo"/>
-  </div>
+    <div className="logo-container">
+      <img src={header} alt="Stimulaatio XXI logo" />
+    </div>
   )
 }
 
@@ -57,67 +55,51 @@ class Stimulaatio extends React.Component {
   render() {
     return (
       <div id="wrapper">
-      <Router>
-        <div>
-        <header>
-          <HeaderImage />
-          <div id="navibar">
-            <Navbar color="faded" light toggleable>
-              <NavbarToggler onClick={this.toggle}/>
-              <Collapse isOpen={this.state.isOpen} navbar>
-                <Nav navbar>
-                  <NavigationTo title="Etusivu" path="/"/>
-                  <NavigationTo title="Ohjelma" path="/ohjelma"/>
-                  <NavigationTo title="Ilmoittautuminen" path="/ilmoittautuminen"/>
-                  <NavigationTo title="Lisätietoa" path="/lisatietoa"/>
-                </Nav>
-              </Collapse>
-            </Navbar>
-          </div>
-        </header>
-        <div className="main-content">
-            <div>
-              <Route exact path="/" component={Home}/>
-              <Route path="/ohjelma" component={Program}/>
-              <Route path="/ilmoittautuminen" component={Registration}/>
-              <Route path="/lisatietoa" component={Info}/>
+        <Router>
+          <div>
+            <header>
+              <HeaderImage />
+              <Navbar color="faded" light expand="md">
+                <NavbarToggler onClick={this.toggle} />
+                <Collapse isOpen={this.state.isOpen} navbar>
+                  <Nav navbar>
+                    <NavigationTo title="Etusivu" path="/" />
+                    <NavigationTo title="Ohjelma" path="/ohjelma" />
+                    <NavigationTo title="Ilmoittautuminen" path="/ilmoittautuminen" />
+                    <NavigationTo title="Lisätietoa" path="/lisatietoa" />
+                  </Nav>
+                </Collapse>
+              </Navbar>
+            </header>
+            <div className="main-content">
+              <div>
+                <Route exact path="/" component={Home} />
+                <Route path="/ohjelma" component={Program} />
+                <Route path="/ilmoittautuminen" component={Registration} />
+                <Route path="/lisatietoa" component={Info} />
+              </div>
             </div>
-        </div>
-        </div>
-      </Router>
+          </div>
+        </Router>
         <footer>
-          <Navbar light>
-            <Row id="sponsored-by">
-              <Col>Yhteistyössä</Col>
-            </Row>
-            <Row id="sponsor-container">
-              <Col id="sponsor" md={{
-                size: 'auto'
-              }}>
-                <a href="https://tuxera.com/" target="_blank" rel="noopener noreferrer"><img src={tuxera} alt="Tuxera"/></a>
-              </Col>
-              <Col id="sponsor" md={{
-                size: 'auto'
-              }}>
-                <a href="https://hiq.fi/" target="_blank" rel="noopener noreferrer"><img src={hiq} alt="HiQ"/></a>
-              </Col>
-              <Col id="sponsor" md={{
-                size: 'auto'
-              }}>
-                <a href="https://academicwork.fi/" target="_blank" rel="noopener noreferrer"><img src={academicwork} alt="Academic Work"/></a>
-              </Col>
-              <Col id="sponsor" md={{
-                size: 'auto'
-              }}>
-                <a href="https://reaktor.fi/" target="_blank" rel="noopener noreferrer"><img src={reaktor} alt="Reaktor"/></a>
-              </Col>
-              <Col id="sponsor" md={{
-                size: 'auto'
-              }}>
-                <a href="https://gofore.fi/" target="_blank" rel="noopener noreferrer"><img src={gofore} alt="Gofore"/></a>
-              </Col>
-            </Row>
-          </Navbar>
+          <h2 id="sponsored-by">Yhteistyössä</h2>
+          <div id="sponsor-container">
+            <div id="sponsor" >
+              <a href="https://tuxera.com/" target="_blank" rel="noopener noreferrer"><img src={tuxera} alt="Tuxera" /></a>
+            </div>
+            <div id="sponsor" >
+              <a href="https://hiq.fi/" target="_blank" rel="noopener noreferrer"><img src={hiq} alt="HiQ" /></a>
+            </div>
+            <div id="sponsor" >
+              <a href="https://academicwork.fi/" target="_blank" rel="noopener noreferrer"><img src={academicwork} alt="Academic Work" /></a>
+            </div>
+            <div id="sponsor" >
+              <a href="https://reaktor.fi/" target="_blank" rel="noopener noreferrer"><img src={reaktor} alt="Reaktor" /></a>
+            </div>
+            <div id="sponsor" >
+              <a href="https://gofore.fi/" target="_blank" rel="noopener noreferrer"><img src={gofore} alt="Gofore" /></a>
+            </div>
+          </div>
         </footer>
       </div>
     );
@@ -125,5 +107,5 @@ class Stimulaatio extends React.Component {
 }
 
 ReactDOM.render(
-  <Stimulaatio/>,
+  <Stimulaatio />,
   document.getElementById('root'))

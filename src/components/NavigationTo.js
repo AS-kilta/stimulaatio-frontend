@@ -11,7 +11,7 @@ import 'bootstrap/dist/css/bootstrap.css';
 class NavigationTo extends Component  {
     render() {
         return (
-            <LinkContainer to={this.props.path} style={{ cursor: 'pointer' }}>
+            <LinkContainer to={this.props.path}>
             <NavItem>
                 <NavLink>{this.props.title}</NavLink>
             </NavItem>
