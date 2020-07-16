@@ -6,7 +6,6 @@ body {
     background-color: #10000C;
     color: #f2f2f2;
     font-family: 'Raleway', sans-serif;
-    font-weight: light;
 }
 
 h1 {
@@ -103,7 +102,6 @@ footer {
 
 #sponsored-by {
     color: #f2f2f2;
-    font-weight: light;
     font-size: 18px;
     letter-spacing: 3px;
     text-transform: uppercase;
@@ -247,10 +245,6 @@ th, td {
     border-bottom: 3px solid #ca55ea;
     color: black;
     background-color: white;
-}
-
-.form-control:focus:ticket_type{
-    color: black !important;
 }
 
 .mad-field {
