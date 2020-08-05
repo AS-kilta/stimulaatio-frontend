@@ -33,16 +33,12 @@ export class RegistrationForm extends React.Component {
       sillis: false,
       table_company: '',
       avec: '',
-      special_diets: false,
-      special_diet: [
-        {lactosefree:false},
-        {vegan:false},
-        {vegetarian:false},
-      ],
+      special_diet: '',
       menu_type: '',
       greeting: false,
       greeting_group: '',
       freshman_year: '',
+      show_name: true,
       modal: false,
       errorModal: false,
       first_name_validation: '',
@@ -222,8 +218,9 @@ export class RegistrationForm extends React.Component {
           <Col xs="12" sm="12" md="8">
             <Input type="select" name="ticket_type" id="ticket_type" onChange={this.handleInputChange}>
               <option value="" selected disabled>Valitse lipputyyppi</option>
-              <option value="student">Opiskelija (á 75€)</option>
-              <option value="full">Valmistunut (á 90€)</option>
+              <option value="free">Tarjottu (á 0€)</option>
+              <option value="student">Opiskelija (á 70€)</option>
+              <option value="full">Valmistunut (á 85€)</option>
             </Input>
           </Col>
         </FormGroup>
@@ -233,7 +230,7 @@ export class RegistrationForm extends React.Component {
             <FormGroup check>
               <Label check>
                 <Input type="checkbox" name="sillis" id="sillis" checked={this.state.sillis} onChange={this.handleInputChange}/>{' '}
-                Osallistun sillikselle (20€)
+                Osallistun sillikselle (25€)
               </Label>
             </FormGroup>
           </Col>
@@ -259,16 +256,6 @@ export class RegistrationForm extends React.Component {
             <Input type="textarea" name="special_diet" id="special_diet" maxLength="200" onChange={this.handleInputChange}/>
           </Col>
         </FormGroup>
-        <FormGroup row>
-          <Label for="sillis" md={3}>Erikoisruokavalio</Label>
-          <Col xs="12" sm="12" md="8">
-          <FormGroup check>
-            <Label check><Input type="checkbox" name="lactosefree" id="lactosefree" defaultChecked={this.state.special_diet[0].lactosefree} onChange={this.handleInputChange} />{' '} laktoositon </Label>
-            <Label check><Input type="checkbox" name="vegan" id="vegan" defaultChecked={this.state.special_diet[1].vegan} onChange={this.handleInputChange} />{' '} vegaani </Label>
-            <Label check><Input type="checkbox" name="ovo-vegan" id="ovo-vegan" defaultChecked={this.state.special_diet[2].vegetarian} onChange={this.handleInputChange} />{' '} kasvis </Label>
-          </FormGroup>
-          </Col>
-        </FormGroup>
         <FormGroup row color={this.state.menu_type_validation}>
           <Label for="menu_type" md={3}>Menu
             <div className="mad-field">*</div>
@@ -287,7 +274,7 @@ export class RegistrationForm extends React.Component {
             <FormGroup check>
               <Label check>
                 <Input type="checkbox" name="is_invited" id="is_invited" checked={this.state.is_invited} onChange={this.handleInputChange}/>{' '}
-                Olen kutsuvieras tai killan toimihenkilö.
+                Olen kutsuvieras
               </Label>
             </FormGroup>
           </Col>
@@ -317,6 +304,17 @@ export class RegistrationForm extends React.Component {
           <Label for="freshman_year" md={3}>Phuksivuosi</Label>
           <Col xs="12" sm="12" md="8">
             <Input type="string" name="freshman_year" id="freshman_year" maxLength="4" onChange={this.handleInputChange}/>
+          </Col>
+        </FormGroup>
+        <FormGroup row>
+          <Label for="show_name" md={3}>Tietojen julkisuus</Label>
+          <Col xs="12" sm="12" md="8">
+            <FormGroup check>
+              <Label check>
+                <Input type="checkbox" name="show_name" id="show_name" checked={this.state.show_name} onChange={this.handleInputChange}/>{' '}
+                Nimeni ja pöytätoiveeni saa julkaista ilmoittautuneet-välilehdellä
+              </Label>
+            </FormGroup>
           </Col>
         </FormGroup>
         {(this.state.form_invalid)
@@ -363,7 +361,7 @@ export class RegistrationForm extends React.Component {
       <Modal isOpen={this.state.errorModal} toggle={this.toggleErrorModal} className="form-modal" backdrop={false}>
         <ModalHeader toggle={this.toggleErrorModal}>Voi ei!</ModalHeader>
         <ModalBody>
-          <p>Vuoden 2019 Stimulaatio on jo juhlittu!</p>
+          <p>Vuoden 2020 Stimulaatio on jo juhlittu!</p>
           <p>{this.state.errorText}</p>
         </ModalBody>
         <ModalFooter>
@@ -394,8 +392,7 @@ export class RegistrationForm extends React.Component {
             {this.formChooser()}
             {this.formModal()}
             {this.formErrorModal()}
-            <p>Julkaisemme ilmoittautuneiden nimet ja pöytäseuratoiveet <br/> 
-            ilmoittautuneet-välilehdellä.</p>
+            <p>Ilmoittautumalla hyväksyt tietojesi tallentamisen ja käsittelyn tietosuojaselosteen mukaisesti.</p>
           </div>
         </div>
       );
