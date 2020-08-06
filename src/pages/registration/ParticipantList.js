@@ -1,6 +1,6 @@
 import React from 'react';
 import axios from 'axios';
-import {BootstrapTable, TableHeaderColumn} from 'react-bootstrap-table';
+import { BootstrapTable, TableHeaderColumn } from 'react-bootstrap-table';
 
 import 'react-bootstrap-table/dist/react-bootstrap-table-all.min.css';
 import '../../styles/index.css';
@@ -11,11 +11,11 @@ export class ParticipantList extends React.Component {
 
         this.state = {
             rowHeight: 40,
-            tableHeight: 3*40+41,
+            tableHeight: 3 * 40 + 41,
         }
 
         this.updateParticipants = this.updateParticipants.bind(this);
-        this.calculateParticipants = this.calculateParticipants.bind(this);
+        this.updateParticipantCount = this.updateParticipantCount.bind(this);
         this.participantRenderer = this.participantRenderer.bind(this);
         this.componentWillMount = this.componentWillMount.bind(this);
     }
@@ -28,34 +28,48 @@ export class ParticipantList extends React.Component {
         axios({
             method: 'get',
             url: ENDPOINT,
-            auth: {
+            auth: {
                 username: USERNAME,
                 password: PASSWORD,
             },
         })
-        .then(response => {
-            this.setState({participants: response.data});
-        })
-        .catch(error => {
-            this.setState({fetchError: true});
-        })
+            .then(response => {
+                this.setState({ participants: response.data });
+            })
+            .catch(error => {
+                this.setState({ fetchError: true });
+            })
     }
 
-    calculateParticipants() {
-        if (!this.state.participants) {
-            return(null);
-        } else {
-            return(<h5>Ilmoittautuneita yhteensä: {this.state.participants.length}</h5>);
-        }
+    updateParticipantCount() {
+        var ENDPOINT = `${process.env.REACT_APP_API_ENDPOINT}`;
+        var USERNAME = `${process.env.REACT_APP_API_USERNAME}`;
+        var PASSWORD = `${process.env.REACT_APP_API_PASSWORD}`;
+
+        axios({
+            method: 'get',
+            url: ENDPOINT + "count",
+            auth: {
+                username: USERNAME,
+                password: PASSWORD,
+            },
+        })
+            .then(response => {
+                this.setState({ participantCount: response.data });
+            })
+            .catch(error => {
+                this.setState({ fetchError: true });
+            })
     }
+
 
     participantRenderer() {
         if (this.state.fetchError) {
-            return(<h5>Voi ei, jokin meni vikaan!</h5>);
+            return (<h5>Voi ei, jokin meni vikaan!</h5>);
         } else if (!this.state.participants) {
-            return(<h5>Lataa ilmoittautuneita...</h5>);
+            return (<h5>Lataa ilmoittautuneita...</h5>);
         } else {
-            return(
+            return (
                 <BootstrapTable data={this.state.participants} options={{ noDataText: 'Ei ilmoittautuneita.' }}>
                     <TableHeaderColumn dataField='first_name' isKey tdStyle={{ whiteSpace: 'normal' }} width='23%'>Etunimi</TableHeaderColumn>
                     <TableHeaderColumn dataField='last_name' tdStyle={{ whiteSpace: 'normal' }} width='27%'>Sukunimi</TableHeaderColumn>
@@ -67,17 +81,18 @@ export class ParticipantList extends React.Component {
 
     componentWillMount() {
         this.updateParticipants();
+        this.updateParticipantCount();
     }
 
     render() {
-        return(
+        return (
             <div>
                 <div id="table-container">
                     {this.participantRenderer()}
                 </div>
-                <div>
-                    {this.calculateParticipants()}
-                </div>
+                {this.state.participantCount
+                    ? <h5>Ilmoittautuneita yhteensä: {this.state.participantCount}</h5>
+                    : null}
             </div>
         );
     }
