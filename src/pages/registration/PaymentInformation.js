@@ -5,6 +5,6 @@ import paymentInformation from '../../content/registration/payment-information.j
 
 export function PaymentInformation() {
   return (
-    <ReactMarkdown source={paymentInformation} className="registration-container"/>
+    <ReactMarkdown source={paymentInformation} className="payment-information" />
   );
 }

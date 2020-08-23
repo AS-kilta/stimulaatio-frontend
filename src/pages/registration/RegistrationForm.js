@@ -184,7 +184,7 @@ export class RegistrationForm extends React.Component {
     return (
       <Form id="registration-form" onSubmit={this.handleSubmit}>
         <FormGroup row color={this.state.first_name_validation}>
-          <Label for="first_name" md={3}>Etunimi
+          <Label for="first_name" md={4}>Etunimi
             <div className="mad-field">*</div>
           </Label>
           <Col xs="12" sm="12" md="8">
@@ -192,7 +192,7 @@ export class RegistrationForm extends React.Component {
           </Col>
         </FormGroup>
         <FormGroup row color={this.state.last_name_validation}>
-          <Label for="last_name" md={3}>Sukunimi
+          <Label for="last_name" md={4}>Sukunimi
             <div className="mad-field">*</div>
           </Label>
           <Col xs="12" sm="12" md="8">
@@ -200,7 +200,7 @@ export class RegistrationForm extends React.Component {
           </Col>
         </FormGroup>
         <FormGroup row color={this.state.email_validation}>
-          <Label for="email" md={3}>Sähköposti
+          <Label for="email" md={4}>Sähköposti
             <div className="mad-field">*</div>
           </Label>
           <Col xs="12" sm="12" md="8">
@@ -212,7 +212,7 @@ export class RegistrationForm extends React.Component {
           </Col>
         </FormGroup>
         <FormGroup row color={this.state.ticket_type_validation}>
-          <Label for="ticket_type" md={3}>Lipputyyppi
+          <Label for="ticket_type" md={4}>Lipputyyppi
             <div className="mad-field">*</div>
           </Label>
           <Col xs="12" sm="12" md="8">
@@ -225,24 +225,26 @@ export class RegistrationForm extends React.Component {
           </Col>
         </FormGroup>
         <FormGroup row>
-          <Label for="sillis" md={3}>Sillis</Label>
+          <Label for="sillis" md={4}>Sillis</Label>
           <Col xs="12" sm="12" md="8">
             <FormGroup check>
               <Label check>
-                <Input type="checkbox" name="sillis" id="sillis" checked={this.state.sillis} onChange={this.handleInputChange}/>{' '}
-                Osallistun sillikselle (25€)
+                <Input type="checkbox" name="sillis" id="sillis" checked={this.state.sillis} onChange={this.handleInputChange}/>
+                <span>
+                  Osallistun sillikselle (25€)
+                </span>
               </Label>
             </FormGroup>
           </Col>
         </FormGroup>
         <FormGroup row>
-          <Label for="table_company" md={3}>Pöytäseura</Label>
+          <Label for="table_company" md={4}>Pöytäseura</Label>
           <Col xs="12" sm="12" md="8">
             <Input type="string" name="table_company" id="table_company" maxLength="100" onChange={this.handleInputChange}/>
           </Col>
         </FormGroup>
         <FormGroup row>
-          <Label for="avec" md={3}>Avec</Label>
+          <Label for="avec" md={4}>Avec</Label>
           <Col xs="12" sm="12" md="8">
             <Input type="string" name="avec" id="avec" maxLength="100" onChange={this.handleInputChange}/>
             <FormText color="muted">
@@ -251,13 +253,13 @@ export class RegistrationForm extends React.Component {
           </Col>
         </FormGroup>
         <FormGroup row>
-          <Label for="special_diet" md={3}>Erikoisruokavalio</Label>
+          <Label for="special_diet" md={4}>Erikoisruokavalio</Label>
           <Col xs="12" sm="12" md="8">
             <Input type="textarea" name="special_diet" id="special_diet" maxLength="200" onChange={this.handleInputChange}/>
           </Col>
         </FormGroup>
         <FormGroup row color={this.state.menu_type_validation}>
-          <Label for="menu_type" md={3}>Menu
+          <Label for="menu_type" md={4}>Menu
             <div className="mad-field">*</div>
           </Label>
           <Col xs="12" sm="12" md="8">
@@ -269,30 +271,34 @@ export class RegistrationForm extends React.Component {
           </Col>
         </FormGroup>
         <FormGroup row>
-          <Label for="is_invited" md={3}>Kutsuvieras</Label>
+          <Label for="is_invited" md={4}>Kutsuvieras</Label>
           <Col xs="12" sm="12" md="8">
             <FormGroup check>
               <Label check>
-                <Input type="checkbox" name="is_invited" id="is_invited" checked={this.state.is_invited} onChange={this.handleInputChange}/>{' '}
-                Olen kutsuvieras
+                <Input type="checkbox" name="is_invited" id="is_invited" checked={this.state.is_invited} onChange={this.handleInputChange}/>
+                <span>
+                  Olen kutsuvieras
+                </span>
               </Label>
             </FormGroup>
           </Col>
         </FormGroup>
         <FormGroup row>
-          <Label for="greeting" md={3}>Tervehdys</Label>
+          <Label for="greeting" md={4}>Tervehdys</Label>
           <Col xs="12" sm="12" md="8">
             <FormGroup check>
               <Label check>
-                <Input type="checkbox" name="greeting" id="greeting" checked={this.state.greeting} onChange={this.handleInputChange}/>{' '}
-                Haluan esittää tervehdyksen cocktailtilaisuudessa
+                <Input type="checkbox" name="greeting" id="greeting" checked={this.state.greeting} onChange={this.handleInputChange}/>
+                <span>
+                  Haluan esittää tervehdyksen cocktailtilaisuudessa
+                </span>
               </Label>
             </FormGroup>
           </Col>
         </FormGroup>
         {(this.state.greeting || this.state.is_invited)
           ? <FormGroup row color={this.state.greeting_group_validation}>
-              <Label for="greeting_group" md={3}>Edustamani taho
+              <Label for="greeting_group" md={4}>Edustamani taho
                 <div className="mad-field">*</div>
               </Label>
               <Col xs="12" sm="12" md="8">
@@ -301,18 +307,20 @@ export class RegistrationForm extends React.Component {
             </FormGroup>
           : null }
         <FormGroup row>
-          <Label for="freshman_year" md={3}>Phuksivuosi</Label>
+          <Label for="freshman_year" md={4}>Phuksivuosi</Label>
           <Col xs="12" sm="12" md="8">
             <Input type="string" name="freshman_year" id="freshman_year" maxLength="4" onChange={this.handleInputChange}/>
           </Col>
         </FormGroup>
         <FormGroup row>
-          <Label for="show_name" md={3}>Tietojen julkisuus</Label>
+          <Label for="show_name" md={4}>Tietojen julkisuus</Label>
           <Col xs="12" sm="12" md="8">
             <FormGroup check>
               <Label check>
-                <Input type="checkbox" name="show_name" id="show_name" checked={this.state.show_name} onChange={this.handleInputChange}/>{' '}
-                Nimeni ja pöytätoiveeni saa julkaista ilmoittautuneet-välilehdellä
+                <Input type="checkbox" name="show_name" id="show_name" checked={this.state.show_name} onChange={this.handleInputChange}/>
+                <span>
+                  Nimeni ja pöytätoiveeni saa julkaista ilmoittautuneet-välilehdellä
+                </span>
               </Label>
             </FormGroup>
           </Col>
@@ -322,6 +330,10 @@ export class RegistrationForm extends React.Component {
               <div className="mad-field">Tarkista kentät!</div>
             </FormFeedback>
           : null }
+        <FormText style={{ margin: "2rem 0" }}>
+          Ilmoittautumalla hyväksyt tietojesi tallentamisen ja käsittelyn
+          tietosuojaselosteen mukaisesti.
+        </FormText>
         <Button disabled={this.state.button_text === 'Lataa...'
           ? true
           : false}>{this.state.button_text}</Button>
@@ -386,20 +398,19 @@ export class RegistrationForm extends React.Component {
   render() {
     if (this.state.form_open) {
       return (
-        <div className="registration-container">
-          <h1>Ilmoittautuminen</h1>
+        <div>
+          <h2>Ilmoittautuminen</h2>
           <div id="form-container">
             {this.formChooser()}
             {this.formModal()}
             {this.formErrorModal()}
-            <p>Ilmoittautumalla hyväksyt tietojesi tallentamisen ja käsittelyn tietosuojaselosteen mukaisesti.</p>
           </div>
         </div>
       );
     } else {
       return (
-        <div className="registration-container">
-          <h1>Ilmoittautuminen</h1>
+        <div>
+          <h2>Ilmoittautuminen</h2>
           <div id="form-container">
             {this.formClosed()}
           </div>

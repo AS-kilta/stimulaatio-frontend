@@ -90,6 +90,7 @@ export class ParticipantList extends React.Component {
                 <div id="table-container">
                     {this.participantRenderer()}
                 </div>
+                <p>Huomaathan, että yllä olevassa listassa näkyy vain julkaisuun luvan antaneiden osallistujien tiedot</p>
                 {this.state.participantCount
                     ? <h5>Ilmoittautuneita yhteensä: {this.state.participantCount}</h5>
                     : null}

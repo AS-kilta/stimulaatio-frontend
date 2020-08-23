@@ -1,5 +1,5 @@
 export default `
-## Tervetuloa Stimulaatioon!
+## Tervetuloa Stimulaatioon
 
 Automaatio- ja systeemitekniikan killan 22. vuosijuhla Stimulaatio XXII järjestetään perjantaina 13.11.2020.
 

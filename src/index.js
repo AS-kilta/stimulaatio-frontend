@@ -15,26 +15,18 @@ import { BrowserRouter as Router, Route } from 'react-router-dom';
 import { Info, Home, Program, Registration } from './pages';
 
 // Images
+import valmet from './img/valmet.png';
 import tuxera from './img/tuxera.png';
 import hiq from './img/HiQ.png';
 import reaktor from './img/reaktor.png';
 import academicwork from './img/academicwork.png';
 import gofore from './img/gofore.png';
-import header from './img/header_final3.png';
 
 // Styles
 import './styles/index.css';
 
 // Components
 import NavigationTo from './components/NavigationTo.js';
-
-const HeaderImage = () => {
-  return (
-    <div className="logo-container">
-      <img src={header} alt="Stimulaatio XXI logo" />
-    </div>
-  )
-}
 
 class Stimulaatio extends React.Component {
   constructor(props) {
@@ -58,7 +50,6 @@ class Stimulaatio extends React.Component {
         <Router>
           <div>
             <header>
-              <HeaderImage />
               <Navbar color="faded" light expand="md">
                 <NavbarToggler onClick={this.toggle} />
                 <Collapse isOpen={this.state.isOpen} navbar>
@@ -85,6 +76,9 @@ class Stimulaatio extends React.Component {
           <h2 id="sponsored-by">Yhteistyössä</h2>
           <div id="sponsor-container">
             <div id="sponsor" >
+              <a href="https://valmet.com/" target="_blank" rel="noopener noreferrer"><img src={valmet} alt="Valmet" /></a>
+            </div>
+            {/* <div id="sponsor" >
               <a href="https://tuxera.com/" target="_blank" rel="noopener noreferrer"><img src={tuxera} alt="Tuxera" /></a>
             </div>
             <div id="sponsor" >
@@ -98,7 +92,7 @@ class Stimulaatio extends React.Component {
             </div>
             <div id="sponsor" >
               <a href="https://gofore.fi/" target="_blank" rel="noopener noreferrer"><img src={gofore} alt="Gofore" /></a>
-            </div>
+            </div> */}
           </div>
         </footer>
       </div>
