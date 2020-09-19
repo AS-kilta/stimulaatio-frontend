@@ -224,7 +224,7 @@ export class RegistrationForm extends React.Component {
             </Input>
           </Col>
         </FormGroup>
-        <FormGroup row>
+{/*         <FormGroup row>
           <Label for="sillis" md={4}>Sillis</Label>
           <Col xs="12" sm="12" md="8">
             <FormGroup check>
@@ -236,7 +236,7 @@ export class RegistrationForm extends React.Component {
               </Label>
             </FormGroup>
           </Col>
-        </FormGroup>
+        </FormGroup> */}
         <FormGroup row>
           <Label for="table_company" md={4}>Pöytäseura</Label>
           <Col xs="12" sm="12" md="8">
