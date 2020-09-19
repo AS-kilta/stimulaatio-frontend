@@ -373,7 +373,7 @@ export class RegistrationForm extends React.Component {
       <Modal isOpen={this.state.errorModal} toggle={this.toggleErrorModal} className="form-modal" backdrop={false}>
         <ModalHeader toggle={this.toggleErrorModal}>Voi ei!</ModalHeader>
         <ModalBody>
-          <p>Vuoden 2020 Stimulaatio on jo juhlittu!</p>
+          <p>Jokin meni mönkään. Jos virhe toistuu, ota yhteyttä stimulantti(at)as.fi</p>
           <p>{this.state.errorText}</p>
         </ModalBody>
         <ModalFooter>
@@ -391,7 +391,7 @@ export class RegistrationForm extends React.Component {
 
   formClosed() {
     return (
-    <h5>Ilmoittautuminen on päättynyt. <br/> <br/> Mahdollisia peruutuspaikkoja voit kysellä Stimulanteilta.</h5>
+    <h5>Ilmoittautuminen on päättynyt. <br/> <br/> Mahdollisia peruutuspaikkoja voit kysellä Stimulantilta.</h5>
     );
   }
 
