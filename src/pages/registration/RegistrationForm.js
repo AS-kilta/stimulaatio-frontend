@@ -25,7 +25,7 @@ export class RegistrationForm extends React.Component {
     this.state = {
       form_open: true,
       form: 'main',
-      is_invited: false,
+      is_invited: true,
       first_name: '',
       last_name: '',
       email: '',
@@ -275,7 +275,7 @@ export class RegistrationForm extends React.Component {
           <Col xs="12" sm="12" md="8">
             <FormGroup check>
               <Label check>
-                <Input type="checkbox" name="is_invited" id="is_invited" checked={this.state.is_invited} onChange={this.handleInputChange}/>
+                <Input type="checkbox" disabled name="is_invited" id="is_invited" checked={this.state.is_invited} onChange={this.handleInputChange}/>
                 <span>
                   Olen kutsuvieras
                 </span>
