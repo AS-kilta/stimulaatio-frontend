@@ -1,20 +1,24 @@
 export default `
 ## Tervetuloa Stimulaatioon
-
+ 
 Automaatio- ja systeemitekniikan killan 22. vuosijuhla Stimulaatio XXII järjestetään perjantaina 13.11.2020.
-
-Juhlat alkavat klassisesti cocktail-tilaisuudella TUAS-talon aulassa (Maarintie 8, 02150 Espoo) kello 16:00. 
-
-Pääjuhlapaikkana toimii Opinmäki, jonne siirrytään cocktailtilaisuuden jälkeen bussikuljetuksella. Pääjuhla alkaa kello 19:00. Vuosijuhlien pukukoodi on juhla- tai tumma puku akateemisin kunniamerkein. Luvassa on kolmen ruokalajin illallisen lisäksi laulua, juhlapuheita, huikeita esityksiä sekä mitä mahtavinta seuraa.
-
-Ilta ei kuitenkaan lopu pääjuhlaan vaan juhlat jatkuvat tämän jälkeen jatkoilla paikassa X, jonka sijainnin juhlakansa saa tietoonsa paikan päällä.
-
-Seuraavana aamuna kello 12:00 alkaen vietetään jo legendaksi muodostunutta silliaamiaista, Stillistä, Rantasaunalla!
-
-Kutsuvierasilmoittautuminen aukeaa tiistaina 29.9. ja avoin ilmo tiistaina 6.10. Ilmottautuminen sulkeutuu kaikkien osalta tiistaina 13.10. Avoimen ilmon mennessä täyteen priorisoidaan Automaatio- ja systeemitekniikan killan jäseniä.
-
+ 
+Juhlat alkavat cocktailtilaisuudella tänä vuonna heti jo pääjuhlapaikalla Opinmäessä klo 17.30 alkaen. Juhlapaikalle on bussikuljetukset Otaniemestä, joista tiedotetaan osallistujia tarkemmin lähempänä tapahtumaa.
+ 
+Pääjuhlapaikkana toimii Opinmäki ([Lillhemtintie 1, 02250 Espoo](https://goo.gl/maps/MS7DcJPW9y3dFKPs9)), jossa varsinainen pöytäjuhla alkaa klo 19.00. Luvassa on kolmen ruokalajin illallisen lisäksi laulua, juhlapuheita sekä mitä mahtavinta seuraa. Vuosijuhlien pukukoodi on juhla- tai tumma puku akateemisin kunniamerkein.
+ 
+Mahdollisista jatkoista ja seuraavan päivän silliaamiaisesta, Stilliksestä tiedotetaan lähempänä tapahtumaa.
+ 
+Kutsuvierasilmoittautuminen aukeaa tiistaina 6.10. ja avoin ilmo tiistaina 13.10. Ilmottautuminen sulkeutuu kaikkien osalta tiistaina 20.10. Avoimen ilmon mennessä täyteen priorisoidaan Automaatio- ja systeemitekniikan killan jäseniä.
+ 
 Illalliskortin hinta on opiskelijoille 70 euroa ja valmistuneille 85 euroa.
 
-Stillislipun hinta on 25 euroa ilmoittautumisen yhteydessä.
-Jos ilmoittautumisen sulkeduttua Stillispaikkoja on vielä jäljellä, avataan erillinen ilmo Stillikselle.
+-------------------------------------------------------------------
+
+Vallitsevan pandemiatilanteen vuoksi huomioithan, että tapahtuma voidaan joutua perumaan lyhyelläkin varoitusajalla. Seuraamme tilanteeseen liittyvää ohjeistusta ja tiedotamme mahdollisista muutoksista tilanteen muuttuessa. Osallistujia tiedotetaan tapahtuman turvatoimista lähempänä juhlaa. Tapahtumassa noudatetaan AS:n [koronavirusohjeistusta](https://as.fi/koronavirusohjeistus).
+ 
+Tapahtumassa esiintyvät tartuntariskiä lisäävät tekijät:  
+* Sisätilassa järjestettävä tapahtuma  
+* Yhteislaulu/muut pisaratartunnan mahdollisuutta lisäävät aktiviteetit  
+* Kaikki tarjoiltava ruoka/juoma ei ole valmistettu ammattilaisten toimesta
 `;

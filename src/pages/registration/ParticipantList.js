@@ -92,7 +92,7 @@ export class ParticipantList extends React.Component {
                 </div>
                 <p>Huomaathan, että yllä olevassa listassa näkyy vain julkaisuun luvan antaneiden osallistujien tiedot</p>
                 {this.state.participantCount
-                    ? <h5>Ilmoittautuneita yhteensä: {this.state.participantCount}</h5>
+                    ? <h5>Ilmoittautuneita yhteensä: {this.state.participantCount}/120</h5>
                     : null}
             </div>
         );

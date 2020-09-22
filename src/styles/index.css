@@ -79,6 +79,23 @@ p a:hover {
   border-bottom: 2px solid white;
 }
 
+hr {
+  background:  #f2f2f2;
+  margin: 2.5rem auto;
+  width: 60%;
+  min-width: 100px;
+  height: 0.8px;
+}
+
+.content li {
+  margin-bottom: 0.5rem;
+}
+
+.content ul {
+  list-style-type: none;
+  padding: 0;
+}
+
 #sponsor img {
   max-height: 10rem;
   max-width: 16rem;

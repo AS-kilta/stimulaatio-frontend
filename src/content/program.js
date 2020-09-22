@@ -7,5 +7,5 @@ export default `
 
 **19.00** - Pääjuhla, Opinmäki ([Lillhemtintie 1, 02250 Espoo](https://goo.gl/maps/MS7DcJPW9y3dFKPs9))
 
-Mahdollisista jatkoista ja seuraavan päivän Stilliksestä tiedotetaan lähempänä tapahtumaa.
+Mahdollisista jatkoista ja seuraavan päivän silliaamiaisesta, Stilliksestä tiedotetaan lähempänä tapahtumaa.
 `;

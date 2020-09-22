@@ -332,7 +332,7 @@ export class RegistrationForm extends React.Component {
           : null }
         <FormText style={{ margin: "2rem 0" }}>
           Ilmoittautumalla hyväksyt tietojesi tallentamisen ja käsittelyn
-          tietosuojaselosteen mukaisesti.
+          <a href="/Rekisteri.pdf"> tietosuojaselosteen</a> mukaisesti.
         </FormText>
         <Button disabled={this.state.button_text === 'Lataa...'
           ? true
